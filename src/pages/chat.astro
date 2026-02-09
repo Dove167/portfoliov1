@@ -1,0 +1,16 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ChatInterface from '../components/chat/ChatInterface';
+---
+
+<BaseLayout title="Chat with Josh">
+  <div className="min-h-screen bg-[#1B2933] p-4">
+    <div className="max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold text-[#D3CCB9] mb-4">Chat with Josh</h1>
+      <p className="text-[#898371] mb-6">Ask me about my projects, skills, or experience. Type / to see available commands.</p>
+      <div className="h-[600px]">
+        <ChatInterface client:load />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

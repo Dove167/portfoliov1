@@ -1,0 +1,182 @@
+/* Import Alegreya Sans from Google Fonts FIRST */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+@plugin "tailwind-scrollbar-hide";
+
+@layer utilities {
+  .transition-max-w {
+    transition: max-width 0.5s ease-in-out;
+  }
+  /* Keyframes */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes rightMarquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes vertical {
+    0% {
+      transform: translateY(0%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes spinSlow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Animation Utility Classes */
+  .animate-marquee {
+    animation: var(--animate-marquee);
+  }
+
+  .animate-rightMarquee {
+    animation: var(--animate-rightMarquee);
+  }
+
+  .animate-slowMarquee {
+    animation: var(--animate-slowMarquee);
+  }
+
+  .animate-verticalMarquee {
+    animation: var(--animate-verticalMarquee);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out forwards;
+  }
+
+  .animate-spin-slow {
+    animation: spinSlow 0.5s ease-out;
+  }
+}
+
+@theme {
+  /* Typography - Josh's Font */
+  --font-sans: "Alegreya Sans", sans-serif;
+
+  /* Josh's Custom Color Palette */
+  /* Dark Blue (Primary Background) */
+  --color-darkblue-50: #e8eaec;
+  --color-darkblue-100: #d1d5d9;
+  --color-darkblue-200: #a3abb3;
+  --color-darkblue-300: #75818d;
+  --color-darkblue-400: #475767;
+  --color-darkblue-500: #1b2933;
+  --color-darkblue-600: #162129;
+  --color-darkblue-700: #10191f;
+  --color-darkblue-800: #0b1014;
+  --color-darkblue-900: #05080a;
+  --color-darkblue-950: #030405;
+
+  /* Light Navy (Secondary) */
+  --color-navy-50: #eceef0;
+  --color-navy-100: #d9dde1;
+  --color-navy-200: #b3bbc3;
+  --color-navy-300: #8d99a5;
+  --color-navy-400: #677887;
+  --color-navy-500: #546078;
+  --color-navy-600: #434d60;
+  --color-navy-700: #323a48;
+  --color-navy-800: #222630;
+  --color-navy-900: #111318;
+  --color-navy-950: #08090c;
+
+  /* Tan Beige (Accent 1) */
+  --color-tan-50: #f5f4f2;
+  --color-tan-100: #ebe9e5;
+  --color-tan-200: #d7d3cb;
+  --color-tan-300: #c3bdb1;
+  --color-tan-400: #afa797;
+  --color-tan-500: #898371;
+  --color-tan-600: #6e695a;
+  --color-tan-700: #524f44;
+  --color-tan-800: #37342d;
+  --color-tan-900: #1b1a17;
+  --color-tan-950: #0d0d0b;
+
+  /* Light Beige (Accent 2) */
+  --color-beige-50: #fafaf9;
+  --color-beige-100: #f5f5f3;
+  --color-beige-200: #ebeae7;
+  --color-beige-300: #e1e0db;
+  --color-beige-400: #d7d5cf;
+  --color-beige-500: #d3ccb9;
+  --color-beige-600: #a9a394;
+  --color-beige-700: #7f7a6f;
+  --color-beige-800: #55524a;
+  --color-beige-900: #2b2925;
+  --color-beige-950: #151413;
+
+  /* Animation Variables */
+  --animate-marquee: marquee 12s linear infinite;
+  --animate-rightMarquee: rightMarquee 300s linear infinite;
+  --animate-slowMarquee: marquee 300s linear infinite;
+  --animate-verticalMarquee: vertical 30s linear infinite;
+}
+
+:root {
+  /* Typography */
+  font-family: 'Alegreya Sans', sans-serif;
+
+  /* Style code blocks */
+  --astro-code-color-text: var(--color-tan-700);
+  --astro-code-background: var(--color-beige-50);
+  --astro-code-token-constant: var(--color-navy-500);
+  --astro-code-token-string: var(--color-darkblue-500);
+  --astro-code-token-comment: var(--color-beige-400);
+  --astro-code-token-keyword: var(--color-navy-400);
+  --astro-code-token-parameter: var(--color-tan-600);
+  --astro-code-token-function: var(--color-darkblue-500);
+  --astro-code-token-string-expression: var(--color-tan-500);
+  --astro-code-token-punctuation: var(--color-beige-300);
+  --astro-code-token-link: var(--color-navy-400);
+}

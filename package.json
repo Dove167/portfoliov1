@@ -1,0 +1,37 @@
+{
+  "name": "josh-portfolio",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build && cp -r src/images dist/",
+    "preview": "astro preview",
+    "astro": "astro",
+    "backend": "cd backend && cargo watch -x run",
+    "backend:build": "cd backend && cargo build --release",
+    "launch": "npm run build && npm run backend:build && cd backend && cargo run --release"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^2.0.0",
+    "@astrojs/react": "^3.0.0",
+    "@astrojs/rss": "^4.0.0",
+    "@astrojs/sitemap": "^3.0.0",
+    "@astrolib/seo": "^1.0.0-beta.8",
+    "@mlc-ai/web-llm": "^0.2.80",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.1.18",
+    "@tambo-ai/react": "^0.75.0",
+    "astro": "4.5.18",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.33.0",
+    "keen-slider": "^6.8.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwind-scrollbar-hide": "^4.0.0",
+    "tailwindcss": "^4.1.18",
+    "zod": "^4.3.6"
+  }
+}

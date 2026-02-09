@@ -1,0 +1,242 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const projects = [
+  {
+    title: "Panday",
+    description: "AI-powered roadmap platform for tradespeople featuring visual journey mapping using React Flow, resource discovery, and personalized guidance for Red Seal certification. Built with Next.js, React, and integrated AI features using LlamaIndex for RAG.",
+    images: [
+      "/images/work/panday_homepage.png",
+      "/images/work/panday_roadmap2.png",
+      "/images/work/roadmap_panday22.png",
+      "/images/work/roadmap_panday23.png"
+    ],
+    tags: ["React", "Next.js", "TypeScript", "AI", "Node.js", "React Flow"],
+    github: "https://github.com/panday-team/panday",
+    demo: "https://panday.app",
+    featured: true
+  }
+];
+---
+
+<BaseLayout title="Projects - Josh Fajardo">
+  <!-- Header -->
+  <section class="bg-darkblue-500 text-beige-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">My Projects</h1>
+        <p class="text-beige-300 text-lg max-w-2xl mx-auto">
+          A collection of my work showcasing full-stack development, AI integration, 
+          and modern web technologies.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="bg-beige-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-16">
+        {projects.map((project, projectIndex) => (
+          <div class="bg-white rounded-2xl overflow-hidden shadow-2xl border-0">
+            <div class="grid lg:grid-cols-2 gap-0">
+              <!-- Image Gallery Side -->
+              <div class="bg-darkblue-500 p-6 lg:p-8">
+                <!-- Main Image Display -->
+                <div class="relative aspect-video rounded-xl overflow-hidden bg-darkblue-600 mb-4 shadow-lg">
+                  {project.images.map((image, index) => (
+                    <img 
+                      id={`project-${projectIndex}-main-${index}`}
+                      src={image} 
+                      alt={`${project.title} screenshot ${index + 1}`}
+                      class={`w-full h-full object-cover absolute inset-0 transition-opacity duration-300 ${index === 0 ? 'opacity-100' : 'opacity-0'}`}
+                    />
+                  ))}
+                  
+                  <!-- Navigation Arrows -->
+                  <button 
+                    class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-darkblue-900/80 hover:bg-darkblue-900 text-beige-100 rounded-full flex items-center justify-center transition-all shadow-lg"
+                    onclick={`prevImage(${projectIndex}, ${project.images.length})`}
+                  >
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                  </button>
+                  <button 
+                    class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-darkblue-900/80 hover:bg-darkblue-900 text-beige-100 rounded-full flex items-center justify-center transition-all shadow-lg"
+                    onclick={`nextImage(${projectIndex}, ${project.images.length})`}
+                  >
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </button>
+                </div>
+                
+                <!-- Thumbnail Navigation -->
+                <div class="flex gap-2 overflow-x-auto pb-2">
+                  {project.images.map((image, index) => (
+                    <button 
+                      class={`flex-shrink-0 w-20 h-14 rounded-lg overflow-hidden border-2 transition-all ${index === 0 ? 'border-tan-500' : 'border-transparent hover:border-tan-500/50'}`}
+                      onclick={`selectImage(${projectIndex}, ${index})`}
+                      data-thumbnail={`${projectIndex}-${index}`}
+                    >
+                      <img 
+                        src={image} 
+                        alt={`Thumbnail ${index + 1}`}
+                        class="w-full h-full object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+                
+                <!-- Image Counter -->
+                <p class="text-center text-beige-300 text-sm mt-3">
+                  <span id={`project-${projectIndex}-counter`}>1</span> / {project.images.length}
+                </p>
+              </div>
+              
+              <!-- Project Info Side -->
+              <div class="p-8 lg:p-12 flex flex-col justify-center">
+                <div class="flex flex-wrap items-center gap-3 mb-4">
+                  <h2 class="text-3xl lg:text-4xl font-bold text-darkblue-500">{project.title}</h2>
+                  {project.featured && (
+                    <span class="px-3 py-1 bg-tan-500 text-darkblue-900 text-sm font-semibold rounded-full">
+                      Featured
+                    </span>
+                  )}
+                </div>
+                
+                <p class="text-navy-600 text-lg mb-8 leading-relaxed">
+                  {project.description}
+                </p>
+                
+                <!-- Tech Stack -->
+                <div class="mb-8">
+                  <h3 class="text-sm font-semibold text-darkblue-500 uppercase tracking-wider mb-4">
+                    Technologies
+                  </h3>
+                  <div class="flex flex-wrap gap-2">
+                    {project.tags.map(tag => (
+                      <span class="px-4 py-2 bg-beige-200 text-darkblue-600 font-medium rounded-lg text-sm">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <!-- Links -->
+                <div class="flex flex-wrap gap-4">
+                  {project.demo && (
+                    <a 
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center space-x-2 px-8 py-4 bg-tan-500 text-darkblue-900 font-semibold rounded-lg hover:bg-tan-400 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                    >
+                      <span>View Live Demo</span>
+                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                      </svg>
+                    </a>
+                  )}
+                  {project.github && (
+                    <a 
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center space-x-2 px-8 py-4 border-2 border-darkblue-500 text-darkblue-500 font-semibold rounded-lg hover:bg-darkblue-500 hover:text-beige-100 transition-all"
+                    >
+                      <span>View Code</span>
+                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                      </svg>
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- More Coming Soon -->
+  <section class="bg-darkblue-500 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-beige-100 mb-4">
+        More Projects Coming Soon
+      </h2>
+      <p class="text-beige-300 mb-6">
+        I'm constantly working on new projects. Check back soon for updates on my latest work, 
+        including client projects and personal experiments.
+      </p>
+      <a 
+        href="/contact"
+        class="inline-block px-6 py-3 border-2 border-tan-500 text-tan-400 font-semibold rounded-lg hover:bg-tan-500 hover:text-darkblue-900 transition-all"
+      >
+        Have a project in mind?
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Track current image index for each project
+  const currentImages = {};
+
+  window.selectImage = function(projectIndex, imageIndex) {
+    const projectImages = document.querySelectorAll(`[id^="project-${projectIndex}-main-"]`);
+    const thumbnails = document.querySelectorAll(`[data-thumbnail^="${projectIndex}-"]`);
+    
+    projectImages.forEach((img, idx) => {
+      if (idx === imageIndex) {
+        img.classList.remove('opacity-0');
+        img.classList.add('opacity-100');
+      } else {
+        img.classList.remove('opacity-100');
+        img.classList.add('opacity-0');
+      }
+    });
+    
+    thumbnails.forEach((thumb, idx) => {
+      if (idx === imageIndex) {
+        thumb.classList.remove('border-transparent');
+        thumb.classList.add('border-tan-500');
+      } else {
+        thumb.classList.remove('border-tan-500');
+        thumb.classList.add('border-transparent');
+      }
+    });
+    
+    currentImages[projectIndex] = imageIndex;
+    
+    const counter = document.getElementById(`project-${projectIndex}-counter`);
+    if (counter) {
+      counter.textContent = (imageIndex + 1).toString();
+    }
+  }
+
+  window.nextImage = function(projectIndex, totalImages) {
+    const currentIndex = currentImages[projectIndex] || 0;
+    const nextIndex = (currentIndex + 1) % totalImages;
+    window.selectImage(projectIndex, nextIndex);
+  }
+
+  window.prevImage = function(projectIndex, totalImages) {
+    const currentIndex = currentImages[projectIndex] || 0;
+    const prevIndex = (currentIndex - 1 + totalImages) % totalImages;
+    window.selectImage(projectIndex, prevIndex);
+  }
+
+  // Initialize
+  document.addEventListener('DOMContentLoaded', () => {
+    // Initialize all projects to show first image
+    document.querySelectorAll('[id^="project-"][id$="-main-0"]').forEach(img => {
+      const match = img.id.match(/project-(\d+)-main-/);
+      if (match) {
+        currentImages[parseInt(match[1])] = 0;
+      }
+    });
+  });
+</script>

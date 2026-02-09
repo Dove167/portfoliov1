@@ -1,0 +1,58 @@
+[
+    {
+        "id": "panday",
+        "name": "Panday",
+        "description": "AI-powered roadmap platform for tradespeople featuring visual journey mapping using React Flow, resource discovery, and personalized guidance for Red Seal certification. Built with Next.js, React, and integrated AI features using LlamaIndex for RAG.",
+        "tags": [
+            "React",
+            "Next.js",
+            "Node.js",
+            "AI",
+            "LlamaIndex",
+            "React Flow"
+        ],
+        "starPosition": {
+            "x": 30,
+            "y": 40
+        },
+        "link": "/projects#panday",
+        "featured": true
+    },
+    {
+        "id": "portfolio",
+        "name": "Digital Portfolio",
+        "description": "Rebellious portfolio with constellation navigation, AI chat interface with slash commands, and generative UI. Built with Astro, React, Axum (Rust), and WebLLM for local AI.",
+        "tags": [
+            "Astro",
+            "React",
+            "Rust",
+            "Axum",
+            "WebLLM",
+            "Tambo"
+        ],
+        "starPosition": {
+            "x": 60,
+            "y": 30
+        },
+        "link": "/projects#portfolio",
+        "featured": true
+    },
+    {
+        "id": "astrox",
+        "name": "Astrox Notes",
+        "description": "Full-stack note-taking application with full-text search using SQLite FTS5. Demonstrates Astro + Axum integration with minimal memory footprint (<2MB).",
+        "tags": [
+            "Astro",
+            "Rust",
+            "Axum",
+            "SQLite",
+            "Tailwind"
+        ],
+        "starPosition": {
+            "x": 70,
+            "y": 60
+        },
+        "link": "/projects#astrox",
+        "featured": true
+    }
+]

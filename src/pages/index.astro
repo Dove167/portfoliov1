@@ -1,0 +1,212 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Hero from "@/components/Hero.astro";
+import { Image } from "astro:assets";
+import pandayImage from "@/images/work/panday_homepage.png";
+
+const skills = [
+  "React", "TypeScript", "Next.js", "Node.js", 
+  "Rust", "Astro", "PostgreSQL", "AI/ML"
+];
+
+const featuredProjects = [
+  {
+    title: "Panday",
+    description: "AI-powered roadmap platform for tradespeople featuring visual journey mapping, resource discovery, and personalized guidance for Red Seal certification.",
+    image: "/images/work/panday_homepage.png",
+    tags: ["React", "Next.js", "AI", "Node.js"],
+    link: "/projects"
+  }
+];
+---
+
+<BaseLayout title="Josh Fajardo - Full Stack Developer">
+  <!-- New Sailboat Hero -->
+  <Hero />
+
+  <!-- Bio Section -->
+  <section class="bg-darkblue-500 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-beige-100 mb-6">
+            From Shop Floors to Code Floors
+          </h2>
+          <div class="space-y-4 text-beige-300 text-lg leading-relaxed">
+            <p>
+              I'm Josh Fajardo, a Full Stack Web Developer in my final term at BCIT. 
+              My path to tech was unconventional—I spent years working as a cashier at 
+              Shoppers Drug Mart, fabricating boat components at Dometic, and in customer 
+              service at a flooring company.
+            </p>
+            <p>
+              These experiences taught me resilience, problem-solving, and the value of 
+              hard work, but I knew I wanted more.
+            </p>
+            <div id="bio-full" class="hidden">
+              <p>
+                After struggling in my first attempt at post-secondary education, I made 
+                the decision to return to adult school, where I earned 90% in English 12 
+                and 81% in Precalculus 12. That commitment opened the door to BCIT, where 
+                I discovered my passion for building user-centric web applications.
+              </p>
+              <p class="mt-4">
+                I specialize in React, Next.js, and AI-driven development tools like 
+                OpenCode CLI and LlamaIndex. On projects like Panday—a roadmap app for 
+                tradesmen—I collaborated with designers, built Figma prototypes, and 
+                integrated AI features under tight deadlines. I'm fascinated by how AI 
+                can transform development workflows and solve business challenges.
+              </p>
+              <p class="mt-4">
+                My goal is to help companies leverage AI and modern web technologies to 
+                build practical, innovative solutions. I'm currently deepening my skills 
+                in Rust and system-level programming while exploring opportunities in 
+                AI-driven development.
+              </p>
+            </div>
+          </div>
+          <button 
+            id="see-more-btn"
+            onclick="document.getElementById('bio-full').classList.toggle('hidden'); document.getElementById('see-more-btn').classList.add('hidden'); document.getElementById('see-less-btn').classList.remove('hidden');"
+            class="mt-6 px-6 py-3 bg-tan-500 text-darkblue-900 font-semibold rounded-lg hover:bg-tan-400 transition-colors shadow-lg"
+          >
+            See More
+          </button>
+          <button 
+            id="see-less-btn"
+            onclick="document.getElementById('bio-full').classList.add('hidden'); document.getElementById('see-more-btn').classList.remove('hidden'); document.getElementById('see-less-btn').classList.add('hidden');"
+            class="mt-6 px-6 py-3 bg-tan-500 text-darkblue-900 font-semibold rounded-lg hover:bg-tan-400 transition-colors shadow-lg hidden"
+          >
+            See Less
+          </button>
+        </div>
+        <div class="text-center">
+          <div class="inline-block p-8 bg-navy-600 rounded-full">
+            <img 
+              src="/images/compass_logo.jpeg" 
+              alt="Josh's Compass" 
+              class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover shadow-xl hover:rotate-12 transition-transform duration-500"
+            />
+          </div>
+          <p class="mt-6 text-tan-400 font-medium">
+            Click the compass or press Ctrl+Q to chat with my AI assistant
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Marquee -->
+  <section class="bg-navy-600 py-4 overflow-hidden">
+    <div class="animate-marquee whitespace-nowrap flex space-x-8">
+      {[...skills, ...skills, ...skills].map(skill => (
+        <span class="text-tan-400 font-medium text-lg">{skill}</span>
+      ))}
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="bg-beige-100 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-darkblue-500 mb-4">Featured Projects</h2>
+        <p class="text-navy-600 text-lg max-w-2xl mx-auto">
+          Here are some of my recent works showcasing my skills in full-stack development, 
+          AI integration, and modern web technologies.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {featuredProjects.map(project => (
+          <a 
+            href={project.link}
+            class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow"
+          >
+            <div class="aspect-video overflow-hidden">
+              <img 
+                src={project.image} 
+                alt={project.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-darkblue-500 mb-2 group-hover:text-tan-600 transition-colors">
+                {project.title}
+              </h3>
+              <p class="text-navy-600 mb-4 line-clamp-2">{project.description}</p>
+              <div class="flex flex-wrap gap-2">
+                {project.tags.map(tag => (
+                  <span class="px-3 py-1 bg-beige-200 text-darkblue-600 text-sm rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+      
+      <div class="text-center mt-12">
+        <a 
+          href="/projects"
+          class="inline-flex items-center space-x-2 text-tan-600 font-semibold hover:text-tan-500 transition-colors"
+        >
+          <span>View All Projects</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section class="bg-darkblue-500 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-beige-100 mb-4">Tech Stack</h2>
+        <p class="text-beige-300">Technologies I work with daily</p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {[
+          { name: "React", category: "Frontend" },
+          { name: "TypeScript", category: "Language" },
+          { name: "Next.js", category: "Framework" },
+          { name: "Node.js", category: "Backend" },
+          { name: "Rust", category: "Systems" },
+          { name: "Astro", category: "Framework" },
+          { name: "PostgreSQL", category: "Database" },
+          { name: "AI/ML", category: "Emerging" }
+        ].map(tech => (
+          <div class="bg-navy-600 rounded-lg p-6 text-center hover:bg-navy-500 transition-colors group">
+            <h3 class="text-lg font-semibold text-tan-400 group-hover:text-tan-300 transition-colors">
+              {tech.name}
+            </h3>
+            <p class="text-sm text-beige-400 mt-1">{tech.category}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-tan-500 py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-darkblue-900 mb-6">
+        Let's Work Together
+      </h2>
+      <p class="text-darkblue-700 text-lg mb-8">
+        I'm currently available for freelance projects and full-time opportunities. 
+        Whether you need a complete web application or want to enhance your existing product, 
+        I'd love to hear from you.
+      </p>
+      <a 
+        href="/contact"
+        class="inline-block px-8 py-4 bg-darkblue-500 text-beige-100 font-semibold rounded-lg hover:bg-darkblue-600 transition-colors shadow-lg"
+      >
+        Get In Touch
+      </a>
+    </div>
+  </section>
+</BaseLayout>

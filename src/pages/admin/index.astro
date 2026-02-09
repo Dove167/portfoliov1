@@ -1,0 +1,106 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Admin Login - Josh Fajardo">
+  <section class="bg-darkblue-500 min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full space-y-8">
+      <div class="text-center">
+        <div class="mx-auto h-16 w-16 flex items-center justify-center rounded-full bg-tan-500 mb-4">
+          <svg class="h-8 w-8 text-darkblue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+        </div>
+        <h2 class="text-3xl font-bold text-beige-100">Admin Login</h2>
+        <p class="mt-2 text-beige-300">Sign in to manage your portfolio</p>
+      </div>
+
+      <form id="login-form" class="mt-8 space-y-6 bg-darkblue-600 p-8 rounded-xl shadow-lg">
+        <div class="space-y-4">
+          <div>
+            <label for="username" class="block text-sm font-medium text-beige-200 mb-2">
+              Username
+            </label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              required
+              class="w-full px-4 py-3 border border-navy-500 rounded-lg bg-darkblue-500 text-beige-100 placeholder-navy-400 focus:ring-2 focus:ring-tan-500 focus:border-tan-500"
+              placeholder="admin"
+            />
+          </div>
+
+          <div>
+            <label for="password" class="block text-sm font-medium text-beige-200 mb-2">
+              Password
+            </label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              required
+              class="w-full px-4 py-3 border border-navy-500 rounded-lg bg-darkblue-500 text-beige-100 placeholder-navy-400 focus:ring-2 focus:ring-tan-500 focus:border-tan-500"
+              placeholder="••••••••"
+            />
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          id="submit-btn"
+          class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-darkblue-900 bg-tan-500 hover:bg-tan-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-tan-500 transition-colors"
+        >
+          Sign in
+        </button>
+
+        <div id="error-message" class="hidden p-4 bg-red-900/50 border border-red-500 rounded-lg text-red-200 text-sm">
+          Invalid username or password
+        </div>
+      </form>
+
+      <div class="text-center">
+        <a href="/" class="text-beige-400 hover:text-tan-400 text-sm transition-colors">
+          ← Back to portfolio
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('login-form');
+  const errorMessage = document.getElementById('error-message');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(form);
+    const data = {
+      username: formData.get('username'),
+      password: formData.get('password'),
+    };
+
+    try {
+      const response = await fetch('http://localhost:3000/api/admin/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        // Store token and redirect to dashboard
+        localStorage.setItem('adminToken', result.token);
+        window.location.href = '/admin/dashboard';
+      } else {
+        errorMessage.classList.remove('hidden');
+      }
+    } catch (error) {
+      errorMessage.classList.remove('hidden');
+    }
+  });
+</script>

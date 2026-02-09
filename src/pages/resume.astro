@@ -1,0 +1,197 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const technicalSkills = [
+  { category: "Languages", skills: ["HTML5", "JavaScript", "TypeScript", "CSS/SASS", "Tailwind", "PHP", "C#", "Rust"] },
+  { category: "Frameworks & Tools", skills: ["React", "Next.js", "Node.js", "Hono", "Bun", ".NET", "Express", "Prisma", "Figma", "Git", "Docker"] },
+  { category: "Databases & AI", skills: ["MongoDB", "MySQL", "PostgreSQL", "Cursor", "Claude Code", "Roo Code", "LlamaIndex"] },
+  { category: "Professional", skills: ["Agile", "CI/CD", "RESTful APIs", "UI/UX Design", "Cloud Computing"] }
+];
+
+const experience = [
+  {
+    title: "Customer Service Representative",
+    company: "Cancork Floors",
+    location: "Richmond, BC",
+    period: "2022 – 2023",
+    description: "Resolved inquiries and enhanced product visibility to increase sales; managed FedEx/Excel shipping operations."
+  },
+  {
+    title: "Production Worker",
+    company: "Dometic",
+    location: "Richmond, BC",
+    period: "2020 – 2022",
+    description: "Fabricated boat pivots, exceeding daily quotas and improving operational efficiency via problem-solving."
+  },
+  {
+    title: "Cashier / Stock Clerk",
+    company: "Shoppers Drug Mart",
+    location: "Richmond, BC",
+    period: "2016 – 2020",
+    description: "Managed cash transactions and inventory via strategic stocking; provided tailored customer support."
+  }
+];
+
+const education = {
+  degree: "Full Stack Web Development Diploma",
+  school: "BCIT",
+  period: "2023 – Present (4th Term)",
+  certifications: [
+    "Serving it Right",
+    "Food Safe Level 1", 
+    "Emergency First Aid & CPR"
+  ],
+  skills: ["Typing: 70 WPM", "Windows/Mac/Linux", "Agile Methodology"]
+};
+---
+
+<BaseLayout title="Resume - Josh Fajardo">
+  <!-- Header -->
+  <section class="bg-darkblue-500 text-beige-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-2">Joshua Fajardo</h1>
+          <p class="text-tan-400 text-xl">Full Stack Web Developer</p>
+          <div class="flex flex-wrap gap-4 mt-4 text-beige-300 text-sm">
+            <a href="tel:778-953-5651" class="hover:text-tan-300 transition-colors">(778) 953-5651</a>
+            <span>•</span>
+            <a href="mailto:jpfajar90@gmail.com" class="hover:text-tan-300 transition-colors">jpfajar90@gmail.com</a>
+            <span>•</span>
+            <a href="https://linkedin.com/in/joshuafajardo" target="_blank" rel="noopener noreferrer" class="hover:text-tan-300 transition-colors">LinkedIn</a>
+          </div>
+        </div>
+        <a 
+          href="#"
+          class="px-6 py-3 bg-tan-500 text-darkblue-900 font-semibold rounded-lg hover:bg-tan-400 transition-colors flex items-center space-x-2"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+          </svg>
+          <span>Download PDF</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Summary -->
+  <section class="bg-beige-100 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Professional Summary</h2>
+      <p class="text-navy-600 text-lg leading-relaxed">
+        Full Stack Web Developer (BCIT) specializing in React, Next.js, and AI-driven tools. 
+        Expert at bridging UI/UX design and technical development to deliver user-centric solutions under tight deadlines. 
+        Currently pursuing Full Stack Web Development diploma at BCIT with hands-on experience in AI integration, 
+        modern frameworks, and database management.
+      </p>
+    </div>
+  </section>
+
+  <!-- Technical Skills -->
+  <section class="bg-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-darkblue-500 mb-8">Technical Skills</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        {technicalSkills.map(category => (
+          <div class="bg-beige-100 rounded-lg p-6">
+            <h3 class="text-lg font-semibold text-darkblue-500 mb-4">{category.category}</h3>
+            <div class="flex flex-wrap gap-2">
+              {category.skills.map(skill => (
+                <span class="px-3 py-1 bg-tan-200 text-darkblue-700 text-sm rounded-full font-medium">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="bg-beige-100 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-darkblue-500 mb-8">Professional Experience</h2>
+      <div class="space-y-8">
+        {experience.map(job => (
+          <div class="bg-white rounded-lg p-6 shadow-sm">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-3">
+              <div>
+                <h3 class="text-xl font-bold text-darkblue-500">{job.title}</h3>
+                <p class="text-tan-600 font-medium">{job.company}</p>
+              </div>
+              <div class="text-right">
+                <p class="text-navy-600 font-medium">{job.period}</p>
+                <p class="text-navy-500 text-sm">{job.location}</p>
+              </div>
+            </div>
+            <p class="text-navy-600">{job.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="bg-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-darkblue-500 mb-8">Education & Certifications</h2>
+      <div class="bg-beige-100 rounded-lg p-6">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-4">
+          <div>
+            <h3 class="text-xl font-bold text-darkblue-500">{education.degree}</h3>
+            <p class="text-tan-600 font-medium text-lg">{education.school}</p>
+          </div>
+          <p class="text-navy-600 font-medium">{education.period}</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-6 mt-6">
+          <div>
+            <h4 class="font-semibold text-darkblue-500 mb-3">Certifications</h4>
+            <ul class="space-y-2">
+              {education.certifications.map(cert => (
+                <li class="flex items-center space-x-2 text-navy-600">
+                  <svg class="w-4 h-4 text-tan-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>{cert}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-darkblue-500 mb-3">Additional Skills</h4>
+            <ul class="space-y-2">
+              {education.skills.map(skill => (
+                <li class="flex items-center space-x-2 text-navy-600">
+                  <svg class="w-4 h-4 text-tan-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>{skill}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-tan-500 py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold text-darkblue-900 mb-4">
+        Interested in working together?
+      </h2>
+      <p class="text-darkblue-700 mb-6">
+        I'm currently available for freelance projects and full-time opportunities.
+      </p>
+      <a 
+        href="/contact"
+        class="inline-block px-8 py-3 bg-darkblue-500 text-beige-100 font-semibold rounded-lg hover:bg-darkblue-600 transition-colors"
+      >
+        Get In Touch
+      </a>
+    </div>
+  </section>
+</BaseLayout>

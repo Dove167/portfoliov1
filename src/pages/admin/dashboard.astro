@@ -1,0 +1,165 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Admin Dashboard - Josh Fajardo">
+  <section class="bg-beige-100 min-h-screen py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="flex justify-between items-center mb-8">
+        <div>
+          <h1 class="text-3xl font-bold text-darkblue-500">Admin Dashboard</h1>
+          <p class="text-navy-600 mt-1">Manage your portfolio content</p>
+        </div>
+        <button
+          id="logout-btn"
+          class="px-4 py-2 bg-darkblue-500 text-beige-100 rounded-lg hover:bg-darkblue-600 transition-colors"
+        >
+          Logout
+        </button>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <div class="flex items-center">
+            <div class="p-3 bg-tan-100 rounded-lg">
+              <svg class="w-6 h-6 text-tan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div class="ml-4">
+              <p class="text-sm text-navy-500">Contact Messages</p>
+              <p id="contact-count" class="text-2xl font-bold text-darkblue-500">Loading...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <div class="flex items-center">
+            <div class="p-3 bg-tan-100 rounded-lg">
+              <svg class="w-6 h-6 text-tan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+              </svg>
+            </div>
+            <div class="ml-4">
+              <p class="text-sm text-navy-500">Projects</p>
+              <p id="project-count" class="text-2xl font-bold text-darkblue-500">Loading...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <div class="flex items-center">
+            <div class="p-3 bg-tan-100 rounded-lg">
+              <svg class="w-6 h-6 text-tan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              </svg>
+            </div>
+            <div class="ml-4">
+              <p class="text-sm text-navy-500">Featured Projects</p>
+              <p id="featured-count" class="text-2xl font-bold text-darkblue-500">Loading...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Contact Messages -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="px-6 py-4 border-b border-beige-200 flex justify-between items-center">
+            <h2 class="text-lg font-bold text-darkblue-500">Recent Messages</h2>
+            <a href="/admin/contacts" class="text-sm text-tan-600 hover:text-tan-500">View all</a>
+          </div>
+          <div id="contacts-list" class="divide-y divide-beige-200 max-h-96 overflow-y-auto">
+            <div class="p-6 text-center text-navy-500">Loading...</div>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <div class="px-6 py-4 border-b border-beige-200 flex justify-between items-center">
+            <h2 class="text-lg font-bold text-darkblue-500">Projects</h2>
+            <a href="/admin/projects" class="text-sm text-tan-600 hover:text-tan-500">Manage</a>
+          </div>
+          <div id="projects-list" class="divide-y divide-beige-200 max-h-96 overflow-y-auto">
+            <div class="p-6 text-center text-navy-500">Loading...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Check authentication
+  const token = localStorage.getItem('adminToken');
+  if (!token) {
+    window.location.href = '/admin';
+  }
+
+  // Logout
+  document.getElementById('logout-btn')?.addEventListener('click', () => {
+    localStorage.removeItem('adminToken');
+    window.location.href = '/admin';
+  });
+
+  // Load dashboard data
+  async function loadDashboard() {
+    try {
+      // Load contacts
+      const contactsRes = await fetch('http://localhost:3000/api/admin/contacts', {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      const contacts = await contactsRes.json();
+      
+      document.getElementById('contact-count').textContent = contacts.contacts?.length || 0;
+      
+      const contactsList = document.getElementById('contacts-list');
+      if (contacts.contacts?.length > 0) {
+        contactsList.innerHTML = contacts.contacts.slice(0, 5).map(contact => `
+          <div class="p-4 hover:bg-beige-50 transition-colors ${contact.read ? '' : 'bg-tan-50'}">
+            <div class="flex justify-between items-start">
+              <div>
+                <p class="font-semibold text-darkblue-500">${contact.name}</p>
+                <p class="text-sm text-navy-500">${contact.subject}</p>
+                <p class="text-xs text-navy-400 mt-1">${new Date(contact.created_at).toLocaleDateString()}</p>
+              </div>
+              ${!contact.read ? '<span class="px-2 py-1 bg-tan-500 text-darkblue-900 text-xs rounded-full">New</span>' : ''}
+            </div>
+          </div>
+        `).join('');
+      } else {
+        contactsList.innerHTML = '<div class="p-6 text-center text-navy-500">No messages yet</div>';
+      }
+
+      // Load projects
+      const projectsRes = await fetch('http://localhost:3000/api/projects');
+      const projects = await projectsRes.json();
+      
+      document.getElementById('project-count').textContent = projects.projects?.length || 0;
+      document.getElementById('featured-count').textContent = projects.projects?.filter(p => p.featured).length || 0;
+      
+      const projectsList = document.getElementById('projects-list');
+      if (projects.projects?.length > 0) {
+        projectsList.innerHTML = projects.projects.map(project => `
+          <div class="p-4 hover:bg-beige-50 transition-colors">
+            <div class="flex justify-between items-center">
+              <div>
+                <p class="font-semibold text-darkblue-500">${project.title}</p>
+                <p class="text-sm text-navy-500">${project.technologies}</p>
+              </div>
+              ${project.featured ? '<span class="px-2 py-1 bg-tan-500 text-darkblue-900 text-xs rounded-full">Featured</span>' : ''}
+            </div>
+          </div>
+        `).join('');
+      } else {
+        projectsList.innerHTML = '<div class="p-6 text-center text-navy-500">No projects yet</div>';
+      }
+    } catch (error) {
+      console.error('Failed to load dashboard:', error);
+    }
+  }
+
+  loadDashboard();
+</script>
