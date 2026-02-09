@@ -1,0 +1,6 @@
+/backend/target
+.claude
+node_modules
+.dev.vars
+.wrangler/
+dist/

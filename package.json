@@ -7,13 +7,15 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build && cp -r src/images dist/",
-    "preview": "astro preview",
+    "preview": "wrangler dev",
+    "deploy": "astro build && cp -r src/images dist/ && wrangler deploy",
     "astro": "astro",
     "backend": "cd backend && cargo watch -x run",
     "backend:build": "cd backend && cargo build --release",
     "launch": "npm run build && npm run backend:build && cd backend && cargo run --release"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^11.2.0",
     "@astrojs/mdx": "^2.0.0",
     "@astrojs/react": "^3.0.0",
     "@astrojs/rss": "^4.0.0",
@@ -24,7 +26,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.18",
     "@tambo-ai/react": "^0.75.0",
-    "astro": "4.5.18",
+    "astro": "^4.16.19",
     "clsx": "^2.1.1",
     "framer-motion": "^12.33.0",
     "keen-slider": "^6.8.6",
@@ -32,6 +34,10 @@
     "react-dom": "^18.2.0",
     "tailwind-scrollbar-hide": "^4.0.0",
     "tailwindcss": "^4.1.18",
+    "wrangler": "^4.63.0",
     "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260207.0"
   }
 }

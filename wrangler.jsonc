@@ -1,0 +1,45 @@
+{
+  // Cloudflare Workers configuration for Josh Fajardo's portfolio
+  // See: https://developers.cloudflare.com/workers/wrangler/configuration/
+  //
+  // SETUP INSTRUCTIONS:
+  // 1. Create a Cloudflare account at https://dash.cloudflare.com
+  // 2. Go to Workers & Pages → Create → Import a repository → Connect GitHub
+  // 3. Create a D1 database: Workers & Pages → D1 SQL Database → Create → name it "portfolio-db"
+  // 4. Copy the database ID and paste it below (replacing the placeholder)
+  // 5. Run the schema: In D1 dashboard → Console tab → paste contents of d1/schema.sql → Run
+  // 6. Set secrets in Workers dashboard → Settings → Variables and Secrets:
+  //    - OPENROUTER_API_KEY (encrypted) = your OpenRouter API key
+  //    - ADMIN_USERNAME (encrypted) = desired admin username
+  //    - ADMIN_PASSWORD (encrypted) = desired admin password
+  // 7. Push a commit or trigger a redeploy — the site will be live!
+
+  "name": "josh-portfolio",
+  "main": "dist/_worker.js/index.js",
+  "compatibility_date": "2024-12-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+
+  // D1 Database binding — replace the placeholder with your actual database ID
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "portfolio-db",
+      "database_id": "YOUR_D1_DATABASE_ID_HERE"
+    }
+  ],
+
+  // Plaintext environment variables
+  "vars": {
+    "OPENROUTER_MODEL": "google/gemini-2.0-flash-lite-preview-02-05:free"
+  }
+
+  // Secrets (set via CLI or dashboard, NOT in this file):
+  // - OPENROUTER_API_KEY
+  // - ADMIN_USERNAME
+  // - ADMIN_PASSWORD
+}
