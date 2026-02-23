@@ -13,17 +13,22 @@ use tower::util::ServiceExt;
 use tower_http::compression::CompressionLayer;
 use tower_http::cors::{Any, CorsLayer};
 use tower_http::services::ServeDir;
+use tracing_subscriber::fmt;
 
 #[tokio::main(flavor = "current_thread")]
 async fn main() {
     dotenv().ok();
 
+    // Initialize tracing
+    fmt::init();
+
     let api_host = std::env::var("PUBLIC_HOST").unwrap_or_else(|_| "localhost:3000".to_string());
 
     let app_state = Arc::new(AppState::new().expect("Failed to initialize database"));
 
-    // Serve static files from parent directory's dist folder (where Astro builds to)
-    let public_path = std::env!("CARGO_MANIFEST_DIR").to_owned() + "/../dist";
+    // Serve static files from the dist folder (where Astro builds to)
+    let public_path = "/app/dist";
+    println!("Serving static files from: {}", public_path);
     let fallback_service = ServeDir::new(public_path).append_index_html_on_directories(true);
 
     let compression_layer = CompressionLayer::new().gzip(true);
