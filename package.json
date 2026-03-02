@@ -11,7 +11,8 @@
     "astro": "astro",
     "backend": "cd backend && cargo watch -x run",
     "backend:build": "cd backend && cargo build --release",
-    "launch": "npm run build && npm run backend:build && cd backend && cargo run --release"
+    "launch": "npm run build && npm run backend:build && npm run backend:start",
+    "backend:start": "cd backend && cargo run --release"
   },
   "dependencies": {
     "@astrojs/mdx": "^2.0.0",

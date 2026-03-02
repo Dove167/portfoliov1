@@ -8,7 +8,7 @@ use axum::{
     RequestPartsExt, Router,
 };
 use dotenv::dotenv;
-use std::sync::Arc;
+use std::{path::PathBuf, sync::Arc};
 use tower::util::ServiceExt;
 use tower_http::compression::CompressionLayer;
 use tower_http::cors::{Any, CorsLayer};
@@ -17,7 +17,9 @@ use tracing_subscriber::fmt;
 
 #[tokio::main(flavor = "current_thread")]
 async fn main() {
-    dotenv().ok();
+    // Load .env from project root (parent of backend/)
+    let root_dir = PathBuf::from(env!("CARGO_MANIFEST_DIR")).parent().unwrap().to_path_buf();
+    dotenv::from_path(root_dir.join(".env")).ok();
 
     // Initialize tracing
     fmt::init();
@@ -27,7 +29,12 @@ async fn main() {
     let app_state = Arc::new(AppState::new().expect("Failed to initialize database"));
 
     // Serve static files from the dist folder (where Astro builds to)
-    let public_path = "/app/dist";
+    // Use /app/dist for production (Fly.io), ../dist for local dev (relative to backend/)
+    let public_path = if std::path::Path::new("/app/dist").exists() {
+        "/app/dist"
+    } else {
+        "../dist"
+    };
     println!("Serving static files from: {}", public_path);
     let fallback_service = ServeDir::new(public_path).append_index_html_on_directories(true);
 
