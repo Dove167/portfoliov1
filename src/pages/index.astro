@@ -1,8 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Hero from "@/components/Hero.astro";
-import { Image } from "astro:assets";
-import pandayImage from "@/images/work/panday_homepage.png";
 
 const skills = [
   "React", "TypeScript", "Next.js", "Node.js", 
@@ -10,6 +8,13 @@ const skills = [
 ];
 
 const featuredProjects = [
+  {
+    title: "The Liminal Void",
+    description: "Interactive psychological horror choose-your-own-adventure game. Navigate through a sentient labyrinth of shifting realities with lives system, inventory, and multiple endings.",
+    image: "/images/work/Liminal_void1.png",
+    tags: ["Astro", "React", "TypeScript", "Zustand"],
+    link: "/projects"
+  },
   {
     title: "Panday",
     description: "AI-powered roadmap platform helping BC tradespeople navigate their career journey from entry-level to Red Seal certification. Features visual journey mapping, an AI chatbot with source-backed answers, and progress tracking.",

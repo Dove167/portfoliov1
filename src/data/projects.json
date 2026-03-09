@@ -1,5 +1,24 @@
 [
     {
+        "id": "liminal-void",
+        "name": "The Liminal Void",
+        "description": "An interactive psychological horror choose-your-own-adventure game. Navigate through a sentient labyrinth of shifting realities, retrieve Dr. Blackwood's research, and survive the Void. Features a lives/hearts system, inventory management, multiple endings, and atmospheric CRT effects.",
+        "tags": [
+            "Astro",
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Zustand"
+        ],
+        "starPosition": {
+            "x": 20,
+            "y": 70
+        },
+        "link": "/projects#liminal-void",
+        "featured": true
+    },
+    {
         "id": "panday",
         "name": "Panday",
         "description": "AI-powered roadmap platform for tradespeople featuring visual journey mapping using React Flow, resource discovery, and personalized guidance for Red Seal certification. Built with Next.js, React, and integrated AI features using LlamaIndex for RAG.",

@@ -3,6 +3,24 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const projects = [
   {
+    title: "The Liminal Void",
+    description: `The Liminal Void is an interactive psychological horror choose-your-own-adventure game built with Astro and React. Players navigate through a sentient labyrinth of shifting realities, retrieve Dr. Blackwood's research, and survive the Void.
+
+The game features a lives/hearts system where players start with 3 lives (expandable to 5 with healing items), a portal charge system for the flashlight weapon (3 charges), and an inventory system that affects story progression. The save system automatically bookmarks progress via localStorage, and players can achieve multiple endings—good, bad, and neutral—based on their choices.
+
+The atmospheric effects include scanlines, glitch text, and a terminal-style UI that creates an immersive horror experience. The story system is data-driven, with chapters defined in JSON featuring choices that can consume charges, add items, deal damage, heal, or set story flags.`,
+    images: [
+      "/images/work/Liminal_void1.png",
+      "/images/work/Liminal_void2.png",
+      "/images/work/Liminal_void3.png",
+      "/images/work/Liminal_void4.png"
+    ],
+    tags: ["Astro", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Zustand"],
+    github: "https://github.com/jpfaj/liminal-void",
+    demo: "https://liminal-void.fly.dev",
+    featured: true
+  },
+  {
     title: "Panday",
     description: `Panday is an AI-powered roadmap platform designed to help people navigate skilled-trades careers in British Columbia. By 2030, BC will need over 85,000 new skilled trades workers, yet over half of registered apprentices never complete their Red Seal certification—not because they're not capable, but because the journey is confusing and overwhelming.
 
