@@ -37,7 +37,6 @@ const education = {
   school: "BCIT",
   period: "2024 – April 2026",
   certifications: [
-    "Dean's List Recognition",
     "Agile Methodology",
     "UI/UX Design"
   ],
@@ -104,6 +103,66 @@ const education = {
             </div>
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="bg-beige-100 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-darkblue-500 mb-8">Projects</h2>
+      <div class="space-y-8">
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-3">
+            <div>
+              <h3 class="text-xl font-bold text-darkblue-500">Panday</h3>
+              <p class="text-tan-600 font-medium">Full Stack Developer (Live Production App)</p>
+            </div>
+            <p class="text-navy-600 font-medium">2025 – Present</p>
+          </div>
+          <p class="text-navy-600 mb-3">
+            <a href="https://panday.app" target="_blank" rel="noopener noreferrer" class="text-tan-500 hover:underline">panday.app</a> | Next.js 15, React 19, TypeScript, PostgreSQL, Prisma, Vercel AI SDK, OpenAI, Tailwind, shadcn/ui
+          </p>
+          <ul class="space-y-2 text-navy-600">
+            <li>Built a live BC trades apprenticeship roadmap platform used by real students, with interactive node-based visualization using React Flow and AI-powered career guidance.</li>
+            <li>Designed and implemented the full RAG chatbot pipeline: OpenAI embeddings, hybrid retrieval, streamed responses via Vercel AI SDK, and thread persistence with CRUD.</li>
+            <li>Implemented rate limiting, Zod validation at API boundaries, and structured JSON logging, delivering the feature under a tight academic deadline.</li>
+            <li>Designed Figma prototypes and translated them into a responsive, accessible UI with Tailwind CSS and shadcn/ui components.</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-3">
+            <div>
+              <h3 class="text-xl font-bold text-darkblue-500">PromptPseudoJS</h3>
+              <p class="text-tan-600 font-medium">Full Stack Developer</p>
+            </div>
+            <p class="text-navy-600 font-medium">2025</p>
+          </div>
+          <p class="text-navy-600 mb-3">
+            Natural Language to JavaScript Converter | TypeScript, Hono.js, React, Vite, TanStack Query, DeepSeek API
+          </p>
+          <ul class="space-y-2 text-navy-600">
+            <li>Built a full stack app that converts plain English to pseudocode and JavaScript using the DeepSeek AI API.</li>
+            <li>Implemented smart caching (memory and file-based) to reduce API calls, plus full conversion history management with search and filter.</li>
+            <li>Followed SOLID principles with a clean client-server architecture; React frontend with TanStack Query for state management.</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-3">
+            <div>
+              <h3 class="text-xl font-bold text-darkblue-500">Obsidian Documentation Project</h3>
+              <p class="text-tan-600 font-medium">Technical Writer and Developer</p>
+            </div>
+            <p class="text-navy-600 font-medium">2024</p>
+          </div>
+          <p class="text-navy-600 mb-3">
+            MkDocs, Markdown, VS Code, Streamable, Canva, Xsplit Broadcaster
+          </p>
+          <ul class="space-y-2 text-navy-600">
+            <li>Created a comprehensive documentation site for Obsidian and the Zettelkasten method with step-by-step guides and instructional GIFs.</li>
+            <li>Produced visual aids using screen recording and GIF editing tools, demonstrating clear technical communication for non-technical users.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
