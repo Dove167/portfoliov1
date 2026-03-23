@@ -22,37 +22,52 @@ The atmospheric effects include scanlines, glitch text, and a terminal-style UI 
   },
   {
     title: "Panday",
-    description: `Panday is an AI-powered roadmap platform designed to help people navigate skilled-trades careers in British Columbia. By 2030, BC will need over 85,000 new skilled trades workers, yet over half of registered apprentices never complete their Red Seal certification—not because they're not capable, but because the journey is confusing and overwhelming.
+    description: `Built a live BC trades apprenticeship roadmap platform used by real students, with interactive node-based visualization using React Flow and AI-powered career guidance.
 
-Panday transforms this confusion into clarity by turning complex apprenticeship requirements into clear, visual node-based roadmaps. Users can explore career paths from foundation programs through each apprenticeship level to Red Seal certification, open milestone details to see eligibility and resources, ask the AI assistant context-aware questions with source-backed answers from official ITA BC and government resources, and track their progress with personalized checklists and a progress dashboard.
+Implemented the full RAG chatbot pipeline: OpenAI embeddings, hybrid retrieval, streamed responses via Vercel AI SDK, and thread persistence with CRUD. Implemented rate limiting, Zod validation at API boundaries, and structured JSON logging.
 
-The app targets three key groups: graduated students exploring trades, trades students currently planning their career, and trades apprentices looking to accelerate their path to certification. Currently supporting electricians with plans to expand to plumbers, HVAC technicians, welders, carpenters, and more.`,
+Designed Figma prototypes and translated them into a responsive, accessible UI with Tailwind CSS and shadcn/ui components. Delivered under a tight academic deadline.`,
     images: [
       "/images/work/panday_homepage.png",
       "/images/work/panday_roadmap2.png",
       "/images/work/roadmap_panday22.png",
       "/images/work/roadmap_panday23.png"
     ],
-    tags: ["React", "Next.js", "TypeScript", "AI", "Node.js", "React Flow", "PostgreSQL", "Clerk", "Vercel AI SDK", "LlamaIndex"],
+    tags: ["Next.js 15", "React 19", "TypeScript", "PostgreSQL", "Prisma", "Vercel AI SDK", "OpenAI", "Tailwind", "shadcn/ui", "React Flow"],
     github: "https://github.com/panday-team/panday",
     demo: "https://panday.app",
     featured: true
   },
   {
     title: "PromptPseudoJS",
-    description: `PromptPseudoJS is an AI-powered tool that converts natural language to pseudocode, then to JavaScript. Built during a summer to help learn JavaScript by reading AI-generated code.
+    description: `Built a full stack app that converts plain English to pseudocode and JavaScript using the DeepSeek AI API.
 
-The tool solves the problem of feeling stuck on syntax — by showing pseudocode first, it forces understanding of logic before implementation. If the JS output doesn't make sense, you can trace it back to the pseudocode step.
-
-This is a learning project in progress: a functional prototype that demonstrates full-stack thinking (React frontend, Hono.js backend, DeepSeek API integration), but still needs production hardening (auth, database, deployment).`,
+Implemented smart caching (memory and file-based) to reduce API calls, plus full conversion history management with search and filter. Followed SOLID principles with a clean client-server architecture using TanStack Query for state management.`,
     images: [
       "/images/case-study/promptpseudjs/PromptPseudoJS_page1.png",
       "/images/case-study/promptpseudjs/PromptPseudoJS_page2.png",
       "/images/case-study/promptpseudjs/PromptPseudoJS_page3.png"
     ],
-    tags: ["React", "Hono.js", "TypeScript", "DeepSeek API", "Tailwind CSS"],
+    tags: ["TypeScript", "Hono.js", "React", "Vite", "TanStack Query", "DeepSeek API"],
     github: "https://github.com/Dove167/PromptPseudoJS",
     demo: "/case-study/promptpseudjs",
+    featured: true
+  },
+  {
+    title: "Obsidian Documentation Project",
+    description: `Created a comprehensive documentation site for Obsidian and the Zettelkasten method with step-by-step guides and instructional GIFs.
+
+Produced visual aids using screen recording and GIF editing tools, demonstrating clear technical communication for non-technical users.`,
+    images: [
+      "/images/work/obsidian/Obsidian_doc1_page1.png",
+      "/images/work/obsidian/Obsidian_doc1_page2.png",
+      "/images/work/obsidian/Obsidian_doc1_page3.png",
+      "/images/work/obsidian/Obsidian_doc1_page4.png",
+      "/images/work/obsidian/Obsidian_doc1_page5.png"
+    ],
+    tags: ["MkDocs", "Markdown", "VS Code", "Screen Recording", "GIF Tools"],
+    github: "https://github.com/djrandhawa15/Markdown-Project-Working",
+    demo: "https://djrandhawa15.github.io/Markdown-Project-Working",
     featured: true
   }
 ];

@@ -3,9 +3,9 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const technicalSkills = [
   { category: "Languages", skills: ["HTML5", "JavaScript", "TypeScript", "CSS/SASS", "Tailwind", "PHP", "C#", "Rust"] },
-  { category: "Frameworks & Tools", skills: ["React", "Next.js", "Node.js", "Hono", "Bun", ".NET", "Express", "Prisma", "Figma", "Git", "Docker"] },
-  { category: "Databases & AI", skills: ["MongoDB", "MySQL", "PostgreSQL", "Cursor", "Claude Code", "Roo Code", "LlamaIndex"] },
-  { category: "Professional", skills: ["Agile", "CI/CD", "RESTful APIs", "UI/UX Design", "Cloud Computing"] }
+  { category: "Frameworks & Tools", skills: ["React", "Next.js", "Node.js", "Hono", "Bun", "Astro.js", ".NET", "Express", "Prisma", "Figma", "Git", "Docker"] },
+  { category: "Databases & AI", skills: ["PostgreSQL", "MongoDB", "MySQL", "SQLite", "Claude Code", "Cursor", "Roo Code", "OpenCode", "LlamaIndex", "Vercel AI SDK", "OpenAI API", "Anthropic API"] },
+  { category: "Professional", skills: ["Agile/Scrum", "CI/CD", "RESTful APIs", "UI/UX Design", "RAG Pipelines", "Responsive Design"] }
 ];
 
 const experience = [
@@ -14,34 +14,34 @@ const experience = [
     company: "Cancork Floors",
     location: "Richmond, BC",
     period: "2022 – 2023",
-    description: "Resolved inquiries and enhanced product visibility to increase sales; managed FedEx/Excel shipping operations."
+    description: "Resolved customer inquiries and enhanced product visibility, contributing to increased sales through targeted recommendations. Managed FedEx shipping logistics and Excel-based inventory tracking for daily operations."
   },
   {
     title: "Production Worker",
     company: "Dometic",
     location: "Richmond, BC",
     period: "2020 – 2022",
-    description: "Fabricated boat pivots, exceeding daily quotas and improving operational efficiency via problem-solving."
+    description: "Fabricated precision boat pivot components, consistently exceeding daily production quotas through problem-solving and process improvement."
   },
   {
-    title: "Cashier / Stock Clerk",
+    title: "Cashier and Stock Clerk",
     company: "Shoppers Drug Mart",
     location: "Richmond, BC",
     period: "2016 – 2020",
-    description: "Managed cash transactions and inventory via strategic stocking; provided tailored customer support."
+    description: "Managed cash transactions and inventory replenishment, providing tailored customer support in a high-volume retail environment."
   }
 ];
 
 const education = {
   degree: "Full Stack Web Development Diploma",
   school: "BCIT",
-  period: "2024 – Present (4th Term)",
+  period: "2024 – April 2026",
   certifications: [
-    "Serving it Right",
-    "Food Safe Level 1", 
-    "Emergency First Aid & CPR"
+    "Dean's List Recognition",
+    "Agile Methodology",
+    "UI/UX Design"
   ],
-  skills: ["Typing: 70 WPM", "Windows/Mac/Linux", "Agile Methodology"]
+  skills: ["React", "Next.js", "TypeScript", "REST APIs", "Git", "Docker", "Cloud Deployment", "Component-Based Architecture"]
 };
 ---
 
@@ -52,8 +52,14 @@ const education = {
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
         <div>
           <h1 class="text-4xl md:text-5xl font-bold mb-2">Joshua Fajardo</h1>
-          <p class="text-tan-400 text-xl">Full Stack Web Developer</p>
-          
+          <p class="text-tan-400 text-xl">Full Stack Web Developer | React & Next.js Engineer | AI-Integrated Web Developer</p>
+          <div class="flex flex-wrap gap-4 mt-4 text-beige-300 text-sm">
+            <span>Richmond, BC</span>
+            <span>•</span>
+            <a href="https://linkedin.com/in/joshua-fajardo-b2879b22b" target="_blank" rel="noopener noreferrer" class="hover:text-tan-300 transition-colors">LinkedIn</a>
+            <span>•</span>
+            <a href="https://joshscompass.com" target="_blank" rel="noopener noreferrer" class="hover:text-tan-300 transition-colors">joshscompass.com</a>
+          </div>
         </div>
         <a 
           href="#"
@@ -65,6 +71,19 @@ const education = {
           <span>Download PDF</span>
         </a>
       </div>
+    </div>
+  </section>
+
+  <!-- Professional Summary -->
+  <section class="bg-beige-100 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Professional Summary</h2>
+      <p class="text-navy-600 text-lg leading-relaxed">
+        Full Stack Web Developer (BCIT, graduating April 2026) specializing in React, Next.js, and AI-integrated applications. 
+        Proven ability to deliver production-ready features under tight deadlines. Built Panday, a live full-stack BC trades apprenticeship 
+        platform with an AI-powered RAG chatbot, real user data, and streamed responses. Expert at bridging UI/UX design and backend 
+        architecture to ship user-centered solutions. Daily user of AI coding tools including OpenCode, Cursor, and Roo Code.
+      </p>
     </div>
   </section>
 
