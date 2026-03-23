@@ -7,9 +7,12 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     <div class="max-w-4xl mx-auto px-4">
       <p class="text-tan-400 font-medium mb-2">Case Study</p>
       <h1 class="text-4xl md:text-5xl font-bold mb-6">PromptPseudoJS</h1>
-      <p class="text-beige-300 text-xl max-w-2xl">
+      <p class="text-beige-300 text-xl max-w-2xl mb-4">
         From Syntax Struggles to Agent Orchestration — documenting the learning journey.
       </p>
+      <div class="inline-block bg-tan-500/20 text-tan-300 px-4 py-2 rounded-lg">
+        <p class="text-sm font-medium">Role: Full Stack Developer — Built the entire application independently</p>
+      </div>
     </div>
   </section>
 
@@ -20,20 +23,20 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
           <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Problem</h2>
           <p class="text-navy-600 leading-relaxed">
             Learning JavaScript felt like hitting a wall. While classmates debugged async issues in minutes, 
-            I spent hours staring at error messages that might as well have been hieroglyphics. 
-            I understood <em>what</em> code should do — I just couldn't translate that into syntactically correct JavaScript.
+            Josh spent hours staring at error messages that might as well have been hieroglyphics. 
+            The understanding of <em>what</em> code should do was present — the gap was translating that into syntactically correct JavaScript.
           </p>
         </div>
 
         <div>
           <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Insight</h2>
           <p class="text-navy-600 leading-relaxed">
-            Using AI to write code felt like cheating at first — like skipping reps that would make me a "real" developer. 
+            Using AI to write code felt like cheating at first — like skipping reps that would make a "real" developer. 
             But something unexpected happened: by reading AI-generated code, seeing how it structured functions, 
-            how it handled edge cases — I started <em>internalizing</em> patterns I had struggled to memorize.
+            how it handled edge cases — patterns started being <em>internalized</em> that had been impossible to memorize before.
           </p>
           <p class="text-navy-600 leading-relaxed mt-4">
-            The AI didn't just write code. It showed me, repeatedly and patiently, how good code looked. 
+            The AI didn't just write code. It showed, repeatedly and patiently, how good code looked. 
             And slowly, the syntax that felt alien started becoming second nature.
           </p>
         </div>
@@ -42,17 +45,39 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
           <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Project</h2>
           <p class="text-navy-600 leading-relaxed">
             PromptPseudoJS — a tool that converts natural language to pseudocode, then to JavaScript. 
-            The pseudocode step was intentional: it forced me to understand the <em>logic</em> before seeing the <em>implementation</em>. 
-            If the JS output didn't make sense, I could trace it back to pseudocode and see where things went wrong.
+            The pseudocode step was intentional: it forced understanding of the <em>logic</em> before seeing the <em>implementation</em>. 
+            If the JS output didn't make sense, tracing it back to the pseudocode step revealed where things went wrong.
           </p>
         </div>
 
         <div>
-          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">What I Built</h2>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Technical Process</h2>
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Frontend</h3>
+              <p class="text-navy-600 text-sm">React + Vite + Tailwind CSS + TanStack Query for state management</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Backend</h3>
+              <p class="text-navy-600 text-sm">Hono.js with TypeScript for lightweight API server</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">AI Integration</h3>
+              <p class="text-navy-600 text-sm">DeepSeek API for natural language to pseudocode to JavaScript conversion</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Caching Strategy</h3>
+              <p class="text-navy-600 text-sm">Memory cache + file-based JSON storage to reduce API calls</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">What Was Built</h2>
           <p class="text-navy-600 leading-relaxed mb-6">
-            A prototype during a summer using Hono.js + React + Vite + Tailwind. 
+            A prototype built during a summer using Hono.js + React + Vite + Tailwind. 
             DeepSeek API for code generation, file-based JSON storage. 
-            It's functional, but clearly built during a learning phase.
+            Functional, but clearly built during a learning phase.
           </p>
           
           <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-beige-200">
@@ -136,11 +161,11 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
         </div>
 
         <div>
-          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Honest Truth</h2>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Current Status</h2>
           <p class="text-navy-600 leading-relaxed">
-            This is half done. The prototype works — but it's vibe-coded, the UI shows "AI aesthetic" hallmarks 
-            (floating cards, exaggerated rounded corners, gold accents), and it's not deployed. 
-            File-based storage, no auth, runs locally only.
+            This is half done. The prototype works — but it shows hallmarks of vibe-coding, 
+            the UI shows "AI aesthetic" patterns (floating cards, exaggerated rounded corners, gold accents), 
+            and it has not been deployed. File-based storage, no auth, runs locally only.
           </p>
           <p class="text-navy-600 leading-relaxed mt-4">
             But that's the point of a learning project. Ship fast, learn, then invest in architecture that matters.
@@ -182,12 +207,12 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
         <div>
           <h2 class="text-2xl font-bold text-darkblue-500 mb-4">What PromptPseudoJS Became</h2>
           <p class="text-navy-600 leading-relaxed">
-            The tool I built to help myself learn JavaScript became:
+            The tool built to help learn JavaScript became:
           </p>
           <ul class="text-navy-600 mt-4 space-y-2 list-disc list-inside">
             <li>A portfolio piece showing full-stack development</li>
             <li>A case study in moving from prototype to production</li>
-            <li>Proof I understand the entire stack: frontend, backend, database, deployment, AI integration</li>
+            <li>Proof of understanding the entire stack: frontend, backend, database, deployment, AI integration</li>
             <li>A reminder that the best developers aren't the ones who code fastest — they're the ones who know how to direct the code-writers</li>
           </ul>
         </div>
