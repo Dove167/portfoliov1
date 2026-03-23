@@ -1,0 +1,267 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="PromptPseudoJS Case Study - Josh Fajardo">
+  <section class="bg-darkblue-500 text-beige-100 py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-tan-400 font-medium mb-2">Case Study</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">PromptPseudoJS</h1>
+      <p class="text-beige-300 text-xl max-w-2xl">
+        From Syntax Struggles to Agent Orchestration — documenting the learning journey.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-beige-100 py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="space-y-12">
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Problem</h2>
+          <p class="text-navy-600 leading-relaxed">
+            Learning JavaScript felt like hitting a wall. While classmates debugged async issues in minutes, 
+            I spent hours staring at error messages that might as well have been hieroglyphics. 
+            I understood <em>what</em> code should do — I just couldn't translate that into syntactically correct JavaScript.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Insight</h2>
+          <p class="text-navy-600 leading-relaxed">
+            Using AI to write code felt like cheating at first — like skipping reps that would make me a "real" developer. 
+            But something unexpected happened: by reading AI-generated code, seeing how it structured functions, 
+            how it handled edge cases — I started <em>internalizing</em> patterns I had struggled to memorize.
+          </p>
+          <p class="text-navy-600 leading-relaxed mt-4">
+            The AI didn't just write code. It showed me, repeatedly and patiently, how good code looked. 
+            And slowly, the syntax that felt alien started becoming second nature.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Project</h2>
+          <p class="text-navy-600 leading-relaxed">
+            PromptPseudoJS — a tool that converts natural language to pseudocode, then to JavaScript. 
+            The pseudocode step was intentional: it forced me to understand the <em>logic</em> before seeing the <em>implementation</em>. 
+            If the JS output didn't make sense, I could trace it back to pseudocode and see where things went wrong.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">What I Built</h2>
+          <p class="text-navy-600 leading-relaxed mb-6">
+            A prototype during a summer using Hono.js + React + Vite + Tailwind. 
+            DeepSeek API for code generation, file-based JSON storage. 
+            It's functional, but clearly built during a learning phase.
+          </p>
+          
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-beige-200">
+            <div class="bg-darkblue-500 p-6">
+              <div class="relative aspect-video rounded-lg overflow-hidden bg-darkblue-600 shadow-lg">
+                <img 
+                  id="case-study-main-0"
+                  src="/images/case-study/promptpseudjs/PromptPseudoJS_page1.png" 
+                  alt="PromptPseudoJS Homepage"
+                  class="w-full h-full object-cover absolute inset-0 transition-opacity duration-300 opacity-100"
+                />
+                <img 
+                  id="case-study-main-1"
+                  src="/images/case-study/promptpseudjs/PromptPseudoJS_page2.png" 
+                  alt="PromptPseudoJS History"
+                  class="w-full h-full object-cover absolute inset-0 transition-opacity duration-300 opacity-0"
+                />
+                <img 
+                  id="case-study-main-2"
+                  src="/images/case-study/promptpseudjs/PromptPseudoJS_page3.png" 
+                  alt="PromptPseudoJS Conversion"
+                  class="w-full h-full object-cover absolute inset-0 transition-opacity duration-300 opacity-0"
+                />
+                
+                <button 
+                  class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-darkblue-900/80 hover:bg-darkblue-900 text-beige-100 rounded-full flex items-center justify-center transition-all shadow-lg"
+                  onclick="prevCaseImage()"
+                >
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                  </svg>
+                </button>
+                <button 
+                  class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-darkblue-900/80 hover:bg-darkblue-900 text-beige-100 rounded-full flex items-center justify-center transition-all shadow-lg"
+                  onclick="nextCaseImage()"
+                >
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </button>
+              </div>
+              
+              <div class="flex gap-3 mt-4">
+                <button 
+                  class="case-thumb flex-shrink-0 w-24 h-16 rounded-lg overflow-hidden border-2 border-tan-500 transition-all"
+                  onclick="selectCaseImage(0)"
+                >
+                  <img 
+                    src="/images/case-study/promptpseudjs/PromptPseudoJS_page1.png" 
+                    alt="Homepage"
+                    class="w-full h-full object-cover"
+                  />
+                </button>
+                <button 
+                  class="case-thumb flex-shrink-0 w-24 h-16 rounded-lg overflow-hidden border-2 border-transparent hover:border-tan-500/50 transition-all"
+                  onclick="selectCaseImage(1)"
+                >
+                  <img 
+                    src="/images/case-study/promptpseudjs/PromptPseudoJS_page2.png" 
+                    alt="History"
+                    class="w-full h-full object-cover"
+                  />
+                </button>
+                <button 
+                  class="case-thumb flex-shrink-0 w-24 h-16 rounded-lg overflow-hidden border-2 border-transparent hover:border-tan-500/50 transition-all"
+                  onclick="selectCaseImage(2)"
+                >
+                  <img 
+                    src="/images/case-study/promptpseudjs/PromptPseudoJS_page3.png" 
+                    alt="Conversion"
+                    class="w-full h-full object-cover"
+                  />
+                </button>
+              </div>
+              
+              <p class="text-center text-beige-300 text-sm mt-3">
+                <span id="case-counter">1</span> / 3 — <span id="case-label">Homepage</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Honest Truth</h2>
+          <p class="text-navy-600 leading-relaxed">
+            This is half done. The prototype works — but it's vibe-coded, the UI shows "AI aesthetic" hallmarks 
+            (floating cards, exaggerated rounded corners, gold accents), and it's not deployed. 
+            File-based storage, no auth, runs locally only.
+          </p>
+          <p class="text-navy-600 leading-relaxed mt-4">
+            But that's the point of a learning project. Ship fast, learn, then invest in architecture that matters.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Evolution Plan</h2>
+          <ul class="text-navy-600 space-y-2 list-disc list-inside">
+            <li>Deploy to fly.io with Docker</li>
+            <li>Replace JSON with Convex backend (auth + real-time)</li>
+            <li>Redesign UI following Uncodixify principles</li>
+            <li>Optionally rewrite backend in Rust (better LLM code generation)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Key Lessons</h2>
+          <div class="space-y-4">
+            <div class="bg-white border border-beige-300 p-4">
+              <h3 class="font-semibold text-darkblue-500 mb-1">AI as a learning tool works</h3>
+              <p class="text-navy-600 text-sm">But only if you actually read and understand what it generates.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4">
+              <h3 class="font-semibold text-darkblue-500 mb-1">Agent orchestration is a real skill</h3>
+              <p class="text-navy-600 text-sm">Understanding model capabilities, prompt engineering, and iteration loops are valuable, teachable abilities.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4">
+              <h3 class="font-semibold text-darkblue-500 mb-1">Vibe coding is a starting point, not an endpoint</h3>
+              <p class="text-navy-600 text-sm">Ship fast, then invest in the architecture that matters.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4">
+              <h3 class="font-semibold text-darkblue-500 mb-1">Design debt is real</h3>
+              <p class="text-navy-600 text-sm">The "AI aesthetic" is a liability when you want to be taken seriously.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">What PromptPseudoJS Became</h2>
+          <p class="text-navy-600 leading-relaxed">
+            The tool I built to help myself learn JavaScript became:
+          </p>
+          <ul class="text-navy-600 mt-4 space-y-2 list-disc list-inside">
+            <li>A portfolio piece showing full-stack development</li>
+            <li>A case study in moving from prototype to production</li>
+            <li>Proof I understand the entire stack: frontend, backend, database, deployment, AI integration</li>
+            <li>A reminder that the best developers aren't the ones who code fastest — they're the ones who know how to direct the code-writers</li>
+          </ul>
+        </div>
+
+        <div class="border-t border-beige-300 pt-8">
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Links</h2>
+          <div class="flex flex-wrap gap-4">
+            <a 
+              href="https://github.com/Dove167/PromptPseudoJS"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center px-6 py-3 bg-darkblue-500 text-beige-100 font-medium rounded-lg hover:bg-darkblue-600 transition-colors"
+            >
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              View on GitHub
+            </a>
+            <a 
+              href="/projects"
+              class="inline-flex items-center px-6 py-3 border border-darkblue-500 text-darkblue-500 font-medium rounded-lg hover:bg-darkblue-500 hover:text-beige-100 transition-colors"
+            >
+              Back to Projects
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const caseLabels = ["Homepage", "History Page", "Conversion View"];
+  let currentCaseImage = 0;
+
+  window.selectCaseImage = function(index) {
+    const images = document.querySelectorAll('[id^="case-study-main-"]');
+    const thumbs = document.querySelectorAll('.case-thumb');
+    
+    images.forEach((img, idx) => {
+      if (idx === index) {
+        img.classList.remove('opacity-0');
+        img.classList.add('opacity-100');
+      } else {
+        img.classList.remove('opacity-100');
+        img.classList.add('opacity-0');
+      }
+    });
+    
+    thumbs.forEach((thumb, idx) => {
+      if (idx === index) {
+        thumb.classList.remove('border-transparent');
+        thumb.classList.add('border-tan-500');
+      } else {
+        thumb.classList.remove('border-tan-500');
+        thumb.classList.add('border-transparent');
+      }
+    });
+    
+    currentCaseImage = index;
+    
+    const counter = document.getElementById('case-counter');
+    const label = document.getElementById('case-label');
+    if (counter) counter.textContent = (index + 1).toString();
+    if (label) label.textContent = caseLabels[index];
+  }
+
+  window.nextCaseImage = function() {
+    const nextIndex = (currentCaseImage + 1) % 3;
+    window.selectCaseImage(nextIndex);
+  }
+
+  window.prevCaseImage = function() {
+    const prevIndex = (currentCaseImage - 1 + 3) % 3;
+    window.selectCaseImage(prevIndex);
+  }
+</script>

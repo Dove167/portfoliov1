@@ -73,5 +73,23 @@
         },
         "link": "/projects#astrox",
         "featured": true
+    },
+    {
+        "id": "promptpseudjs",
+        "name": "PromptPseudoJS",
+        "description": "AI-powered tool that converts natural language to pseudocode, then to JavaScript. Built to learn JavaScript by reading AI-generated code — a case study in using AI as a learning tool.",
+        "tags": [
+            "React",
+            "Hono.js",
+            "TypeScript",
+            "DeepSeek API",
+            "Tailwind CSS"
+        ],
+        "starPosition": {
+            "x": 45,
+            "y": 55
+        },
+        "link": "/case-study/promptpseudjs",
+        "featured": true
     }
 ]
