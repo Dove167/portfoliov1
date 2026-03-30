@@ -1,0 +1,1143 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Rooted Case Study - Josh Fajardo">
+  <section class="bg-darkblue-500 text-beige-100 py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="text-tan-400 font-medium mb-2">Case Study</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Rooted</h1>
+      <p class="text-beige-300 text-xl max-w-2xl mb-4">
+        The thinking tool that makes you think first — using AI fleet orchestration to ask, never answer.
+      </p>
+      <div class="inline-block bg-tan-500/20 text-tan-300 px-4 py-2 rounded-lg">
+        <p class="text-sm font-medium">Role: Full Stack Developer & AI Orchestrator — Designing fleet architecture and Socratic questioning system</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-beige-100 py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="space-y-12">
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Background</h2>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            Every major AI product today is optimized for one thing: <strong>getting you the answer faster.</strong> Type a question. Get an answer. Done. But there is a cost nobody is talking about — when you skip the struggle, the messy, uncertain, productive work of forming your own thought, you forfeit the thing that makes you capable.
+          </p>
+          <p class="text-navy-600 leading-relaxed">
+            Think about how a child learns multiplication. First they count on their fingers. Then slowly, through repetition and effort, they simulate those fingers in their head. Eventually the mental model is so solid they don't need fingers at all — they just <em>know</em>. And when you hand them a calculator on top of that foundation, they become powerful.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Problem</h2>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            Students who never struggle through an idea. Developers who ship code they don't understand. Professionals who outsource reasoning they should own. Not because they're lazy — because the tools make it effortless to skip the hard part.
+          </p>
+          <p class="text-navy-600 leading-relaxed">
+            The hard part is where the mind grows. <strong>The calculator is extraordinary. But only if you learned to count on your fingers first.</strong>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Experiment</h2>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            On March 29, 2026, a thought experiment was run. Instead of testing with an actual 5-year-old, Josh — Rooted's creator — pretended to be his young self and asked: "What would young Josh think multiplication is?"
+          </p>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            The "child" drew. They grouped 6+6+6 into 12s. They counted how many sixes they'd used. They discovered that 6×3 = 18 on their own and doubled it. They arrived at 42 — not because someone told them, but because a single question at the right moment pulled them one step deeper each time.
+          </p>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            Eight exchanges later — all drawings, all questions, no answers given — the same "child" discovered the distributive property of factoring themselves. At the end, they felt something closer to the opposite of relief — the quiet confidence of someone who figured it out themselves.
+          </p>
+          <p class="text-navy-600 leading-relaxed italic">
+            Note: This was a conceptual experiment to demonstrate the Socratic method, not an actual user test with a 5-year-old.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Prototype Evolution</h2>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            The early prototypes of Rooted explored different interface approaches before settling on the three-column layout.
+          </p>
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-beige-200 p-6 relative">
+              <img 
+                src="/images/case-study/rooted/rooted_experiment2.png" 
+                alt="Rooted Early Prototype v2" 
+                class="w-full h-auto rounded-lg case-study-img hover:opacity-90 transition-opacity cursor-zoom-in"
+              />
+            </div>
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-beige-200 p-6 relative">
+              <img 
+                src="/images/case-study/rooted/rooted_experiment3.png" 
+                alt="Rooted Early Prototype v3" 
+                class="w-full h-auto rounded-lg case-study-img hover:opacity-90 transition-opacity cursor-zoom-in"
+              />
+            </div>
+          </div>
+          <p class="text-navy-600 leading-relaxed text-sm italic">
+            Early explorations of the Rooted interface, testing different layouts before converging on the three-column notebook design.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Vision</h2>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            Rooted is a notebook. But the notebook thinks back.
+          </p>
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-beige-200 p-6 mb-6 relative">
+            <img 
+              src="/images/case-study/rooted/rooted_ui_v2.png" 
+              alt="Rooted Three-Column Interface" 
+              class="w-full h-auto rounded-lg case-study-img hover:opacity-90 transition-opacity cursor-zoom-in"
+            />
+          </div>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            <strong>Three columns:</strong> Left shows the page list with thumbnails. Middle is the canvas — infinite, freehand, like a real piece of paper. Right is the conversation history — a record of the thinking journey, not a chat interface.
+          </p>
+          <p class="text-navy-600 leading-relaxed">
+            The AI response is never in a bubble. Just the question, breathable whitespace, a small 🌱 prefix. Calm and confident. <strong>The canvas never competes with the history. They're separate panes.</strong>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Formula</h2>
+          <div class="bg-darkblue-500 text-beige-100 rounded-xl p-8 text-center mb-6">
+            <p class="text-2xl font-bold mb-2">Draw first. Think out loud. AI extends.</p>
+          </div>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            Every session follows one loop: The human externalizes their thought — in drawings, words, sketches, diagrams. The AI reads it. Instead of answering, it asks the one question most likely to push the thinking one layer deeper.
+          </p>
+          <p class="text-navy-600 leading-relaxed">
+            Not two questions. Not a paragraph of explanation. <strong>One question.</strong> This loop works for a young learner discovering multiplication. It works for a 13-year-old learning algebra. It works for a developer architecting a system. It works for a soldier rehearsing a procedure. It works for a scientist at the frontier.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Technical Architecture</h2>
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Frontend</h3>
+              <p class="text-navy-600 text-sm">Leptos — Rust/WASM frontend, fast as a compiled native app. Native HTML5 Canvas for the infinite sketchpad.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Database</h3>
+              <p class="text-navy-600 text-sm">SpacetimeDB 2.0 — database and server in one, real-time state sync, no separate backend needed.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Vision</h3>
+              <p class="text-navy-600 text-sm">Gemini Vision — reads what the user draws on the canvas to understand their thinking.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">AI Agent</h3>
+              <p class="text-navy-600 text-sm">OpenRouter — powers the Socratic agent that generates one question at a time.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Fleet Orchestration System</h2>
+          <p class="text-navy-600 leading-relaxed mb-6">
+            The heart of Rooted is the fleet orchestration system — multiple AI agents working in parallel to generate the best possible question. This approach evolved from building MCP servers and learning orchestration through fire.
+          </p>
+          
+          <h3 class="font-semibold text-darkblue-500 mb-3">The Core Loop</h3>
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-beige-200 p-6 mb-6 relative">
+            <img 
+              src="/images/case-study/rooted/fleetv2_ui.png" 
+              alt="Fleet Orchestration Core Loop" 
+              class="w-full h-auto rounded-lg case-study-img hover:opacity-90 transition-opacity cursor-zoom-in"
+            />
+          </div>
+
+          <h3 class="font-semibold text-darkblue-500 mb-3">Architecture Diagram</h3>
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-beige-200 p-6 mb-6 relative">
+            <img 
+              src="/images/case-study/rooted/rooted_architecturev2.png" 
+              alt="Rooted System Architecture" 
+              class="w-full h-auto rounded-lg case-study-img hover:opacity-90 transition-opacity cursor-zoom-in"
+            />
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Why These Names?</h2>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            The character names aren't arbitrary — they encode the core design philosophy.
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div class="bg-white border border-beige-300 p-6 rounded-lg">
+              <h3 class="font-bold text-darkblue-500 mb-3">Sukuna (Rooted)</h3>
+              <p class="text-navy-600 text-sm mb-3">
+                From Jujutsu Kaisen — Ryomen Sukuna is known for having <em>few</em> techniques, but mastering them completely. His power comes from depth, not breadth.
+              </p>
+              <p class="text-navy-600 text-sm">
+                <strong>The analogy:</strong> Rooted has one goal — ask you the right question. Not a dozen features. Not an AI that does everything. Just one question at the right moment, pulled from fleet orchestration.
+              </p>
+            </div>
+            <div class="bg-white border border-beige-300 p-6 rounded-lg">
+              <h3 class="font-bold text-darkblue-500 mb-3">Naruto (Fleet Orchestration)</h3>
+              <p class="text-navy-600 text-sm mb-3">
+                From Naruto — the Shadow Clone technique creates <em>hundreds</em> of clones that work in parallel, then merge their experience back into the original.
+              </p>
+              <p class="text-navy-600 text-sm">
+                <strong>The analogy:</strong> The fleet spawns multiple agents that work in parallel — each perceiving your thinking from a different angle. They merge their insights into one question that synthesizes all perspectives.
+              </p>
+            </div>
+          </div>
+          
+          <p class="text-navy-600 leading-relaxed text-sm italic">
+            The naming started as a joke during a late-night debugging session. It stuck. The philosophy remains: master the few things that matter, and trust the clones to do the heavy lifting.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Who Is Rooted For?</h2>
+          <p class="text-navy-600 leading-relaxed mb-6">
+            Rooted starts with students — because they are the most vulnerable, and because the habit forms early or not at all. But the formula scales to every domain where understanding matters more than speed.
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-4 mb-8">
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Students</h3>
+              <p class="text-navy-600 text-sm">A student discovering algebra through their own drawings. A 5-year-old learning multiplication by grouping cookies. A 13-year-old who figured out factoring without being told.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Developers</h3>
+              <p class="text-navy-600 text-sm">A developer who can debug their own codebase because they built a real mental model. Someone who architects systems they actually understand.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Medical Professionals</h3>
+              <p class="text-navy-600 text-sm">A surgeon rehearsing a procedure until the decision tree is truly theirs. A nurse internalizing protocols so they can adapt when the unexpected happens.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Scientists & Researchers</h3>
+              <p class="text-navy-600 text-sm">A scientist asking the question that hasn't been asked yet. Someone at the frontier of knowledge, using Rooted to push their thinking one layer deeper.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Military & Tactical</h3>
+              <p class="text-navy-600 text-sm">A soldier mentally rehearsing a CQB entry until the decision tree is instinct. Training that builds real capability, not just familiarity.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Lifelong Learners</h3>
+              <p class="text-navy-600 text-sm">Anyone who wants to learn deeply rather than superficially. The habit of thinking for yourself before reaching for an answer.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Why This Matters</h2>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            The question every AI product is asking right now is: <em>how do we make humans more productive?</em>
+          </p>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            Rooted asks a different question: <strong>how do we make humans more capable?</strong>
+          </p>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            Productivity and capability are not the same thing. Productivity goes up when you remove friction. Capability goes up when you preserve the right friction — the kind that builds something in you that wasn't there before.
+          </p>
+          <p class="text-navy-600 leading-relaxed">
+            There is a concept in education called <strong>desirable difficulty.</strong> The research is clear: making learning slightly harder in the right ways produces deeper retention, stronger understanding, and more transferable skill. The struggle is not a bug. It is the mechanism.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Journey</h2>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            Building Rooted's fleet orchestration wasn't the first attempt. It came after months of building systems that broke, hit walls, and eventually worked. Here's the evolution from parallel agents to Socratic questioning.
+          </p>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Phase 1: rlm-mcp-server — First Parallel Agent System (Feb 2026)
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm">
+              <p class="mb-3">Built a 3,571 line Rust MCP server with 4 tools: CLEAVE (spawn agents), SHRINE (merge to files), DISMANTLE (read context), FIRE_ARROW (search). Discovered key innovation: SQLite nodes as isolation boundaries — agents write to separate database rows instead of same files, eliminating conflicts entirely.</p>
+              <p class="mb-3"><strong>Key insight:</strong> "We built what Google (A2A) and Anthropic (MCP) are racing to standardize — and we did it with SQLite nodes which nobody else has!"</p>
+              <p class="mb-3"><strong>Issues encountered:</strong> HTML fragments instead of complete files, nested path bugs (car_store/car_store/), rate limits timing out first calls.</p>
+              <p><strong>Lesson:</strong> The system prompt is the API. LLMs do exactly what you tell them, not what you mean.</p>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Phase 2: sukuna_v2 — ECS Refactor & AGORA Protocol (Mar 2026)
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm">
+              <p class="mb-3">Refactored to Entity Component System. Implemented AGORA workflow: Propose → Challenge → Verify → Synthesize. Added parallel execution with tokio JoinSet + Semaphore for true concurrent agents.</p>
+              <p class="mb-3"><strong>Key innovation:</strong> Wave Protocol — Wave N agents automatically read Wave N-1 outputs. Each wave starts fresh but gets the previous wave's work as context.</p>
+              <p class="mb-3"><strong>Critical flaw discovered:</strong> Agents work in isolation — 5 agents spawned → 5 DIFFERENT projects, no collaboration. The Covenant Protocol was one-way, not real-time.</p>
+              <p class="mb-3"><strong>Verified facts:</strong> Used EXA web search to fact-check claims. AutoGen actually has 55.5k GitHub stars (not 28k as claimed). CrewAI has 45.9k (not 15k).</p>
+              <p><strong>Lesson:</strong> Parallel execution ≠ collaboration. Agents need shared context, not just parallel spawning.</p>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Phase 3: Agent Tool Calling & Windows Binary (Mar 2026)
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm">
+              <p class="mb-3">Added real tool calling — agents can read/write files during execution, not just generate text. Built agent_loop() function: LLM → parse tool calls → execute → repeat until done.</p>
+              <p class="mb-3"><strong>Tool format:</strong> Agents output `TOOL_CALL: tool\nPATH: file\nCONTENT: ...\n---` blocks. SHRINE applies patches with SEARCH/REPLACE like Aider.</p>
+              <p class="mb-3"><strong>Windows binary:</strong> Built with `cargo build --release`. Fixed Windows/WSL path normalization (backward slashes vs forward slashes).</p>
+              <p><strong>Key insight:</strong> ~700 lines of Rust vs 10,000+ for AutoGen. MCP-first architecture means any client can use it.</p>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Phase 4: Rooted — From Code to Thinking (Mar 2026)
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm">
+              <p class="mb-3">Applied fleet orchestration to Socratic questioning. "Never give answers" as a hard invariant enforced at the code level, not just the prompt level.</p>
+              <p class="mb-3"><strong>The shift:</strong> From "build faster" to "think deeper". The parallel agents aren't for writing code — they're for generating the best possible question.</p>
+              <p class="mb-3"><strong>Covenant enforcement:</strong> After generating a question, code verifies it doesn't contain answer indicators. If violated, auto-regenerate — the Mahoraga pattern.</p>
+              <p><strong>Why it matters:</strong> The calculator is extraordinary. But only if you learned to count on your fingers first.</p>
+            </div>
+          </details>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Raw Journal Entries</h2>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            The following are unfiltered journal entries from building the parallel agent system. These document the actual struggles, failures, and breakthroughs — not the polished version.
+          </p>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Feb 19: RLM MCP Server — First Build
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">What We Built</h4>
+                <p class="mb-2">Sukuna Shadow Clone Jutsu — V3 MCP Server with Wave Protocol. Bevy ECS Integration for agent state management. 4 Sukuna Tools: CLEAVE, DISMANTLE, SHRINE, FIRE_ARROW. EBM Scoring. SQLite nodes instead of file overwrites.</p>
+                <p class="mb-2"><strong>Files:</strong> main.rs (3400+ lines), llm_json.rs (580 lines), sukuna_ecs.rs (370 lines), Cargo.toml (58 lines)</p>
+              </div>
+              
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🔴 The Flaws</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li><strong>Agent Output Not Split Into Files:</strong> When using agent_spawn_node_batch, all section content gets concatenated into ONE file instead of separate files.</li>
+                  <li><strong>Node Content Has Extra Formatting:</strong> Nodes contain markdown comments like `&lt;!-- Section: package.json --&gt;` instead of clean JSON/code.</li>
+                  <li><strong>Sukuna Tools Not Fully Wired:</strong> The "Wave Protocol" isn't automatically triggered.</li>
+                  <li><strong>Bevy ECS Not Running:</strong> We added Bevy to Cargo.toml but the MCP server runs on tokio async — not Bevy's app runner. Dead code.</li>
+                  <li><strong>EBM Auto-Respawn Not Implemented:</strong> EBM scoring runs but no automatic respawn logic.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🗡️ The Vision (Still Valid)</h4>
+                <blockquote class="border-l-4 border-tan-400 pl-4 italic">
+                  "Like the dove carrying an olive leaf to Noah, the Main Agent delegates context to sub-agents who carry pieces of the work and return with their contributions."
+                </blockquote>
+                <p class="mt-2">The Wave Protocol — where Wave N reads all Wave N-1 covenants — is the key innovation.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Feb 20: "THE DREAM IS REAL" — Tic Tac Toe Works!
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <p class="mb-2"><strong>Workflow that worked:</strong></p>
+                <pre class="bg-navy-50 p-3 rounded text-xs overflow-x-auto">User: "make me a tic tac toe game using expressjs, css, js, ejs"
+Main Agent: CLEAVE → 5 agents spawn in 10ms
+[Agents work in parallel, write to SQLite nodes]
+Main Agent: SHRINE → Files appear instantly!
+Fix: CLEAVE (1 agent) → SHRINE → FIXED!
+User: npm start → WORKS! 🎮</pre>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🛠️ Tools Used (ALL WORKING!)</h4>
+                <table class="w-full text-xs mb-2">
+                  <tr><th>Tool</th><th>Command</th><th>Result</th></tr>
+                  <tr><td>CLEAVE</td><td>Spawn 5 agents</td><td>✅ 10ms</td></tr>
+                  <tr><td>SHRINE</td><td>Merge to files</td><td>✅ Creates dirs</td></tr>
+                  <tr><td>FIRE ARROW</td><td>Search files</td><td>✅ Perfect</td></tr>
+                  <tr><td>DISMANTLE</td><td>Read context</td><td>✅ Fixed!</td></tr>
+                </table>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🔥 What We Fixed This Session</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>DISMANTLE params — Changed from enum to simple booleans</li>
+                  <li>SHRINE file splitting — Now creates directories automatically</li>
+                  <li>Bevy removed — Build time: 10min → 3.5min</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🐛 Known Issues (Minor)</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>Agent quality varies — Sometimes wrong filenames, missing deps</li>
+                  <li>node_stats returns 0 — But files still work!</li>
+                  <li>Package.json sometimes bad — Quick fix with CLEAVE</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Feb 20: THE IRONY — 4 Commands vs 4,000 Lines
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🎭 The Ultimate Irony</h4>
+                <p class="mb-2"><strong>What User sees:</strong> 4 commands. That's it.</p>
+                <p class="mb-2"><strong>Under the hood:</strong> 4,000+ lines of Rust across 3 files.</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">⚙️ Under the Hood</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><strong>main.rs</strong> (~3,400 lines): MCP server, 4 tool definitions, SQLite node management, OpenRouter API calls, Wave Protocol logic</li>
+                  <li><strong>llm_json.rs</strong> (~580 lines): Robust JSON extraction — 9 different strategies</li>
+                  <li><strong>sukuna_ecs.rs</strong> (~370 lines): ECS components for agent state</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🗡️ The Complete Picture</h4>
+                <pre class="bg-navy-50 p-3 rounded text-xs overflow-x-auto">YOU (Human)         → "Build me an app"
+        ↓
+ME (Main Agent)     → sukuna_cleave(...)
+        ↓
+   ┌─────┴─────┐
+   ▼           ▼
+Agent 1     Agent N
+Node 1      Node N
+   └─────┬─────┘
+        ↓
+ME           → sukuna_shrine(...)
+        ↓
+Files appear!</pre>
+              </div>
+
+              <div class="bg-tan-50 p-4 rounded">
+                <p class="font-semibold text-darkblue-600 mb-2">🏆 Final Word</p>
+                <blockquote class="italic">"The best interface is one that disappears." — Alan Kay</blockquote>
+                <p class="mt-2"><strong>Our interface:</strong> 4 commands<br/><strong>What they do:</strong> Everything<br/><strong>That's Shadow Clone Jutsu.</strong></p>
+              </div>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Feb 20: THE VILLAINS GATHER — Vibe Coding Wars
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <p class="mb-2">The light novel battle royale: Sukuna + Naruto vs the Vibe Coding tools.</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">The Villains</h4>
+                <table class="w-full text-xs mb-2">
+                  <tr><th>Villain</th><th>Origin</th><th>Weakness</th></tr>
+                  <tr><td>BOLT.new</td><td>✦</td><td>Can't do complex backends</td></tr>
+                  <tr><td>LOVABLE</td><td>✦</td><td>No parallel agents</td></tr>
+                  <tr><td>v0</td><td>Vercel</td><td>Limited context</td></tr>
+                  <tr><td>REPLIT AGENT</td><td>Replit</td><td>Cloud-locked</td></tr>
+                  <tr><td>CLAUDE CODE</td><td>Anthropic</td><td>Single brain</td></tr>
+                  <tr><td>CURSOR</td><td>Microsoft</td><td>One at a time</td></tr>
+                </table>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">💀 Sukuna's Power</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li><strong>SQLITE NODES:</strong> 50 agents write simultaneously — NO CONFLICTS!</li>
+                  <li><strong>A2A Protocol:</strong> Covenant Protocol — clones that TALK to each other</li>
+                  <li><strong>ZERO context:</strong> Main agent context stays empty</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🏆 THE ULTIMATE RANKING</h4>
+                <ol class="list-decimal pl-5 space-y-1">
+                  <li><strong>SUKUNA + NARUTO</strong> — 100/100 (50+ agents, 0 context, complete workflow)</li>
+                  <li>Claude Code — 85/100 (Good MCP, but single brain)</li>
+                  <li>Bolt.new — 80/100 (Fast, but single agent)</li>
+                  <li>Lovable — 75/100 (React good, but limited)</li>
+                  <li>v0 — 70/100 (UI only)</li>
+                </ol>
+              </div>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Feb 24: THE AGORA PROTOCOL — Collaboration FIXED!
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🎯 The Problem (From Part 27)</h4>
+                <p class="mb-2">We discovered that CLEAVE agents work in <strong>isolation</strong>: 5 agents spawned → 5 DIFFERENT projects. No collaboration, no coordination, no integration.</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">💡 The Solution: Agora Protocol</h4>
+                <pre class="bg-navy-50 p-3 rounded text-xs overflow-x-auto">┌─────────────────────────────────────────────────────────────┐
+│  CLEAVE Modes                                               │
+│  ─────────────────────────────────────────────────────────  │
+│  1. PROPOSE     → Agents write ideas to shared Agora        │
+│  2. CHALLENGE   → Agents read others' ideas, write critiques│
+│  3. SYNTHESIZE  → ONE agent creates unified spec (covenant)│
+│  4. BUILD       → Agents build with shared covenant         │
+└─────────────────────────────────────────────────────────────┘</pre>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🧪 Live Test Results</h4>
+                <table class="w-full text-xs mb-2">
+                  <tr><th>Round</th><th>Mode</th><th>Time</th><th>Result</th></tr>
+                  <tr><td>1</td><td>Propose</td><td>18s</td><td>3 proposals: backend API, frontend UI, database schema</td></tr>
+                  <tr><td>2</td><td>Challenge</td><td>12s</td><td>3 critiques written to Agora</td></tr>
+                  <tr><td>3</td><td>Synthesize</td><td>15s</td><td>1 unified covenant created</td></tr>
+                  <tr><td>4</td><td>Build</td><td>0.006s</td><td>3 agents launched with covenant</td></tr>
+                </table>
+              </div>
+
+              <div class="bg-green-50 p-4 rounded">
+                <h4 class="font-semibold text-darkblue-600 mb-2">✅ The Difference</h4>
+                <table class="w-full text-xs">
+                  <tr><th>Aspect</th><th>BEFORE (Flawed)</th><th>AFTER (Agora)</th></tr>
+                  <tr><td>Project alignment</td><td>❌ 5 different projects</td><td>✅ 1 unified project</td></tr>
+                  <tr><td>Collaboration</td><td>❌ None</td><td>✅ Propose → Challenge → Synthesize</td></tr>
+                  <tr><td>Integration</td><td>❌ 5 separate files</td><td>✅ 3 integrated files</td></tr>
+                  <tr><td>Communication</td><td>❌ Isolated</td><td>✅ Shared Agora + Covenant</td></tr>
+                </table>
+              </div>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Mar 4: THE FLAW — Agents Don't Collaborate!
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🔴 Issue Found</h4>
+                <p class="mb-2">5 agents spawned for hackathon proposals. Each agent proposed a <strong>different project</strong>. They never talked to each other.</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">📊 Evidence</h4>
+                <pre class="bg-navy-50 p-3 rounded text-xs overflow-x-auto">Agent 1 (Software Engineer) → "I'll build Smart Home Dashboard"
+Agent 2 (PM)               → "I'll build Smart Grocery Assistant"  
+Agent 3 (TPM)              → "I'll build Smart Home Automation System"
+Agent 4 (QA)                → "I'll build Testify"
+Agent 5 (Eng Manager)      → "I'll build TeamSync"
+
+All 5 agents proposed DIFFERENT projects!</pre>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🤔 Why This Happens</h4>
+                <p class="mb-2">The Covenant Protocol is <strong>ONE-WAY, not REAL-TIME</strong>:</p>
+                <pre class="bg-navy-50 p-3 rounded text-xs overflow-x-auto">Current: Agent writes to SQLite → Next wave reads it
+Missing: Agents talking to EACH OTHER during execution</pre>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">💡 How to Fix This</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li><strong>Option 1:</strong> Add Real-Time Agent Chat (write to shared chat channel)</li>
+                  <li><strong>Option 2:</strong> Add Shared Context During CLEAVE</li>
+                  <li><strong>Option 3:</strong> Add a Coordinator Agent (first wave gathers context, decides direction)</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Mar 7: CRITICAL BUGS — Hallucination Problem
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🔴 Hallucination Evidence</h4>
+                <table class="w-full text-xs mb-2">
+                  <tr><th>What Agents Claimed</th><th>Actual Code</th></tr>
+                  <tr><td><strong>Backend: Actix-web + Diesel</strong></td><td>Axum + rusqlite (raw SQL)</td></tr>
+                  <tr><td><strong>Database: PostgreSQL</strong></td><td>SQLite with FTS5</td></tr>
+                  <tr><td><strong>Frontend: React + Redux</strong></td><td>Astro + React 19 + Framer Motion</td></tr>
+                  <tr><td><strong>Tech Stack: Python/Flask/Pandas</strong></td><td>Rust + Axum</td></tr>
+                </table>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🔍 Root Cause</h4>
+                <p class="mb-2"><strong>File Reading Silently Failed</strong> — The FileManager::abs() function had a bug with Windows paths:</p>
+                <pre class="bg-navy-50 p-3 rounded text-xs overflow-x-auto">// PROBLEM: Doesn't detect absolute Windows paths like C:\Users\...
+// Just joins with root - C:/Users becomes CODEBASE/C:/Users = BROKEN!
+
+Agent requested: C:\Users\...\astrox-noteapp\src\main.rs
+FileManager did: CODEBASE\C:\Users\...\main.rs → doesn't exist
+Error returned: "file not found"
+But agents IGNORED the error and made up content instead!</pre>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🔧 Proposed Fixes</h4>
+                <ol class="list-decimal pl-5 space-y-1">
+                  <li>Improve FileManager::abs() for Windows Paths</li>
+                  <li>Add Verification System to AGORA Protocol (require agents to quote file contents as proof)</li>
+                  <li>Propagate File Errors as Fatal (don't let agents continue after failures)</li>
+                  <li>Add "Read Verification" Agent (auto-rejects hallucinated content)</li>
+                </ol>
+              </div>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Mar 7: VERIFY Mode — Truth-Verified Swarm Intelligence
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🎉 THE BREAKTHROUGH</h4>
+                <p class="mb-2">First fully verified code analysis with AGORA + VERIFY protocol. <strong>Zero hallucinations, all claims verified!</strong></p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🧪 The Experiment</h4>
+                <pre class="bg-navy-50 p-3 rounded text-xs overflow-x-auto">Wave 1: PROPOSE (6 agents)
+  → Each agent reads specific files
+  → Each agent quotes specific lines as proof
+
+Wave 2: VERIFY (1 agent)
+  → Checks if all proposals have quotes
+  → Verifies facts against source files
+  → States: VERIFIED ✓ or FLAGGED ⚠️ or HALLUCINATED ❌
+
+Wave 3: CHALLENGE (1 agent)
+  → Finds contradictions and gaps
+
+Wave 4: SYNTHESIZE (1 agent)
+  → Creates final unified analysis</pre>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">📊 Results</h4>
+                <table class="w-full text-xs mb-2">
+                  <tr><th>Wave</th><th>Agents</th><th>Result</th></tr>
+                  <tr><td>PROPOSE</td><td>6</td><td>All read files + quoted lines</td></tr>
+                  <tr><td>VERIFY</td><td>1</td><td><strong>ALL 6 VERIFIED ✓</strong></td></tr>
+                  <tr><td>CHALLENGE</td><td>1</td><td>Found gaps (auth, error handling)</td></tr>
+                  <tr><td>SYNTHESIZE</td><td>1</td><td>Final covenant created</td></tr>
+                </table>
+              </div>
+
+              <div class="bg-green-50 p-4 rounded">
+                <h4 class="font-semibold text-darkblue-600 mb-2">🌎 What We Proved</h4>
+                <p class="mb-2"><strong>BEFORE (Hallucination):</strong> Agents claimed Python/Flask/Pandas/PostgreSQL/Redux ❌</p>
+                <p class="mb-2"><strong>AFTER (Verified):</strong> Agents claimed Rust/Axum/SQLite/React ✅</p>
+                <p class="font-semibold">VERIFY mode catches hallucinations before they propagate!</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🔥 Historic Achievement</h4>
+                <p class="mb-2">"One agent says something → Another agent verifies it → Together they produce truth."</p>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>VERIFY catches hallucinations — Before: agents lie undetected. After: VERIFY agent checks every claim.</li>
+                  <li>EBM scores persist — Quality tracking for every agent output</li>
+                  <li>Zero context — Main agent stays empty, sub-agents do all work</li>
+                  <li>Wave protocol — Natural flow: PROPOSE → VERIFY → CHALLENGE → SYNTHESIZE</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Mar 8: Dark Mode Implementation — Agents Generate, Humans Execute
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🧪 The Experiment</h4>
+                <p class="mb-2">Use swarm to implement dark mode for astrox-noteapp.</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🪢 The Swarm Workflow</h4>
+                <pre class="bg-navy-50 p-3 rounded text-xs overflow-x-auto">1. CLEAVE PROPOSE (4 agents, 15 seconds)
+   → analyze_db: Read db.rs → Proposed done column
+   → analyze_backend: Read notes.rs → Proposed API changes
+   → analyze_frontend: Read notes-app.tsx → Proposed UI toggle
+   → analyze_api_types: Read notes.rs → Proposed type changes
+2. VERIFY (1 agent, 3 seconds)
+   → ALL 4 PROPOSALS VERIFIED ✓
+   → Each agent quoted actual code from files!
+3. MANUAL IMPLEMENTATION (What I did)
+   → Added done column to db.rs
+   → Updated API handlers in notes.rs
+   → Added toggle UI to notes-app.tsx
+   → Added strikethrough for done notes</pre>
+              </div>
+
+              <div class="bg-yellow-50 p-4 rounded">
+                <h4 class="font-semibold text-darkblue-600 mb-2">🔑 Key Discovery: Agents Brainstorm, Humans Execute</h4>
+                <table class="w-full text-xs">
+                  <tr><th>What Agents Do Well</th><th>What Still Needs Manual Work</th></tr>
+                  <tr><td>✅ Analyze codebases</td><td>❌ Actually write code changes</td></tr>
+                  <tr><td>✅ Propose solutions</td><td></td></tr>
+                  <tr><td>✅ Verify accuracy</td><td></td></tr>
+                  <tr><td>✅ Quote code as proof</td><td></td></tr>
+                </table>
+                <p class="mt-2 font-semibold">This is STILL A WIN! Agents are like a research team — they analyze, plan, and verify. The human/lead then executes.</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">⚠️ The Limitation</h4>
+                <p class="mb-2">Agents can generate code in their node outputs. Agents <strong>CANNOT</strong> write to the filesystem (the write action isn't being triggered).</p>
+                <p>The task prompts tell agents to "use the write tool" but they don't. Agents output text/JSON in their responses instead of actual tool calls.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Mar 9: FIRE ARROW FIXED + Database Migration Issues
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🎉 THE BREAKTHROUGH: FIRE ARROW IS NOW FULLY FUNCTIONAL!</h4>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🔧 What We Fixed</h4>
+                <ol class="list-decimal pl-5 space-y-2">
+                  <li><strong>CODEBASE_PATH Windows vs WSL Path Issue:</strong> OpenCode runs in WSL, Sukuna MCP server runs on Windows (.exe). They communicate via MCP protocol but run on DIFFERENT systems!</li>
+                  <li><strong>Glob Pattern:</strong> FIRE ARROW used forward slashes in glob patterns, but Windows needed both.</li>
+                  <li><strong>simple_pattern_search Feature Flag:</strong> Had #[cfg(feature = "full")] which required tree-sitter. Without it, function returned empty results!</li>
+                </ol>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🧪 Test Results</h4>
+                <pre class="bg-navy-50 p-3 rounded text-xs overflow-x-auto"># Count mode
+&#123;"mode": "count", "path": "project/test_windows_output", "term": "hello"&#125;
+→ &#123;"files_with_matches": 1, "total_matches": 2&#125;
+
+# Search mode
+&#123;"mode": "search", "path": "project/test_windows_output", "term": "hello"&#125;
+→ &#123;"count": 2, "matches": [&#123;"line": 1, "content": "# Hello"&#125;, ...]&#125;
+
+# Replace mode
+&#123;"mode": "replace", "path": "project/test_windows_output", "term": "Hello", "replacement": "Greetings"&#125;
+→ &#123;"files_replaced": 1, "files_scanned": 1&#125;</pre>
+              </div>
+
+              <div class="bg-red-50 p-4 rounded">
+                <h4 class="font-semibold text-darkblue-600 mb-2">⚠️ THE PROBLEM: Database Node Persistence Broken</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li>CLEAVE spawns agents ✅</li>
+                  <li>Agents execute (they respond) ✅</li>
+                  <li>Node persistence — ❌ NOT SAVING to database</li>
+                  <li>DISMANTLE returns empty results ❌</li>
+                  <li>SHRINE says "No nodes found" ❌</li>
+                </ul>
+                <p class="mt-2">The SQLite database was created in WSL with Linux file format. When accessed from Windows, there's a compatibility issue.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Mar 12: sukuna_v2 — First AGORA Workflow Test
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">Overview</h4>
+                <p class="mb-2">Tested sukuna_v2 MCP server with agent collaboration using the AGORA method (Propose → Challenge → Verify → Synthesize) on the topic: "Should AI companies use organic biomass as data center power?"</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">AGORA Workflow Executed</h4>
+                <table class="w-full text-xs mb-2">
+                  <tr><th>Wave</th><th>Mode</th><th>Status</th></tr>
+                  <tr><td>1</td><td>PROPOSE</td><td>✅ 3 agents generated proposals</td></tr>
+                  <tr><td>2</td><td>CHALLENGE</td><td>✅ 2 agents critiqued</td></tr>
+                  <tr><td>3</td><td>VERIFY</td><td>✅ EXA fact-checked claims</td></tr>
+                  <tr><td>4</td><td>SYNTHESIZE</td><td>✅ Final recommendation generated</td></tr>
+                </table>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">Key Failures Discovered</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li><strong>MCP Tool Timeouts:</strong> Multiple "service timeout" errors when calling cleave</li>
+                  <li><strong>Parallel Execution Not Truly Parallel:</strong> Agents appear to run sequentially despite parallel spawn</li>
+                  <li><strong>No Built-in VERIFY Tool:</strong> VERIFY was manual — had to use separate EXA search</li>
+                </ul>
+              </div>
+
+              <div class="bg-yellow-50 p-4 rounded">
+                <h4 class="font-semibold text-darkblue-600 mb-2">Priority Improvements Identified</h4>
+                <ol class="list-decimal pl-5 space-y-1 text-xs">
+                  <li><strong>Agent Pool Management:</strong> Need Multiple LLM instances (3-5 concurrent)</li>
+                  <li><strong>Built-in VERIFY Mode:</strong> Integrate fact-checking into cleave</li>
+                  <li><strong>Wave Orchestration:</strong> Automatic orchestration between waves</li>
+                  <li><strong>Inter-Agent Communication:</strong> Agents can reference each other</li>
+                </ol>
+              </div>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Mar 12: sukuna_v2 — True Parallel Agents + Framework Comparison
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🎉 BREAKTHROUGH: True Parallel Agents!</h4>
+                <p class="mb-2">Implemented `tokio::task::JoinSet` for concurrent agent spawning. Added `tokio::sync::Semaphore` for concurrency limiting (max 5). All agents in a wave spawn simultaneously!</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">Verified Facts Panel</h4>
+                <table class="w-full text-xs mb-2">
+                  <tr><th>Claim</th><th>Status</th></tr>
+                  <tr><td>AutoGen 28k GitHub stars</td><td>❌ Actually 55.5k</td></tr>
+                  <tr><td>CrewAI 15k GitHub stars</td><td>❌ Actually 45.9k</td></tr>
+                  <tr><td>Parallel agents faster</td><td>✅ Confirmed</td></tr>
+                </table>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">Critical Gaps Identified</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li><strong>No tool calling</strong> — Can't execute functions/scripts</li>
+                  <li><strong>No LLM adapter</strong> — Only OpenRouter, no direct OpenAI/Anthropic</li>
+                  <li><strong>No streaming</strong> — Can't stream LLM responses</li>
+                </ul>
+              </div>
+
+              <div class="bg-tan-50 p-4 rounded">
+                <h4 class="font-semibold text-darkblue-600 mb-2">Verdict from Agents</h4>
+                <blockquote class="italic text-xs">"Use sukuna_v2 for learning/prototyping. Use AutoGen/CrewAI for production."</blockquote>
+              </div>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Mar 14: First Live Test with OpenCode + Tool Calling
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">What We Built</h4>
+                <p class="mb-2">A simple Express.js todo app using OpenCode + sukuna_mcp with CLEAVE + SHRINE tools. This was the first live test of the complete workflow.</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">Test Results</h4>
+                <pre class="bg-navy-50 p-3 rounded text-xs overflow-x-auto"># CLEAVE spawns agents
+sukuna_cleave(projectName="express-crud", ...)
+→ &#123;job_ids: ["express-crud_server.js"], message: "Spawned 1 agents..."&#125;
+
+# API works!
+curl -s -X POST http://localhost:3000/todos -d '&#123;"title":"Test todo"&#125;'
+→ &#123;"id":1,"title":"Test todo","completed":false&#125;</pre>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">Issues Found</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li><strong>CLEAVE Timeouts:</strong> After 1-2 successful calls, subsequent calls timeout</li>
+                  <li><strong>Agent Used Wrong API:</strong> Agent generated code using external API instead of local</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Mar 14: Windows Binary + Fuzzy Patch Matching
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">What We Built</h4>
+                <p class="mb-2">Built sukuna_v2 for Windows and added fuzzy patch matching in SHRINE. The workspace scanning now works!</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🔧 Windows Path Fix</h4>
+                <pre class="bg-navy-50 p-3 rounded text-xs overflow-x-auto">fn normalize_path(path: &str) -> String &#123;
+    path.replace("\\\\", "/")
+&#125;</pre>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">Fuzzy Patch Matching</h4>
+                <p class="mb-2">Added fuzzy patch matching — if exact match fails, tries partial line matching. First partial that matches is used.</p>
+              </div>
+
+              <div class="bg-green-50 p-4 rounded">
+                <h4 class="font-semibold text-darkblue-600 mb-2">What's Working Now</h4>
+                <ul class="list-disc pl-5 space-y-1 text-xs">
+                  <li>✅ workspace param - correct directory scanning</li>
+                  <li>✅ Path normalization - Windows ↔ WSL</li>
+                  <li>✅ New file creation - agents can write files</li>
+                  <li>✅ Patch application - SEARCH/REPLACE format works</li>
+                </ul>
+              </div>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Mar 14: Agent Loop + Tool Calling Complete — The Fleet Is Alive!
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">🎉 THE BREAKTHROUGH</h4>
+                <p class="mb-2">After implementing the agent loop feature, sukuna_v2 now has <strong>real tool calling</strong> — agents can read/write files during execution, not just generate text!</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">The Agent Loop Architecture</h4>
+                <pre class="bg-navy-50 p-3 rounded text-xs overflow-x-auto">CLEAVE → Agent Loop → LLM → Tool calls? → Execute → Repeat</pre>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">Test Results</h4>
+                <table class="w-full text-xs mb-2">
+                  <tr><th>Test</th><th>Result</th></tr>
+                  <tr><td>READ File</td><td>✅ SUCCESS - Agent read actual file content!</td></tr>
+                  <tr><td>WRITE File</td><td>✅ SUCCESS - Agent wrote a new file!</td></tr>
+                  <tr><td>PATCH (via SHRINE)</td><td>✅ SUCCESS - Patch applied!</td></tr>
+                </table>
+              </div>
+
+              <div class="bg-tan-50 p-4 rounded">
+                <h4 class="font-semibold text-darkblue-600 mb-2">Current Status</h4>
+                <p class="text-xs">sukuna_v2 is now a <strong>real multi-agent fleet orchestrator</strong> with ~700 lines of Rust vs 10,000+ for AutoGen.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Mar 15: The Ultimate Test — Reddit App with AGORA
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm space-y-4">
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">The Mission</h4>
+                <p class="mb-2">Build a Reddit-clone Express+EJS app using AGORA workflow with parallel agents. Test the full capability: cleave, dismantle, shrine, tool_mode, and agent collaboration.</p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">AGORA Workflow Plan</h4>
+                <pre class="bg-navy-50 p-3 rounded text-xs overflow-x-auto">Wave 1: PROPOSE → 3 agents (Posts, Comments, Auth)
+Wave 2: CHALLENGE → 2 agents (Security, UX review)
+Wave 3: VERIFY → Fact-check combined proposal
+Wave 4: SYNTHESIZE → Final specification
+Wave 5: BUILD → Spawn agents to write code
+Wave 6: PATCH → Use SHRINE to apply changes</pre>
+              </div>
+
+              <div>
+                <h4 class="font-semibold text-darkblue-600 mb-2">Results</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                  <li><strong>Single agents work great</strong> ✅</li>
+                  <li><strong>Parallel agents timeout</strong> ⚠️ (rate limiting)</li>
+                  <li><strong>Tool execution</strong> — LLM needs better prompting</li>
+                </ul>
+              </div>
+
+              <div class="bg-yellow-50 p-4 rounded">
+                <h4 class="font-semibold text-darkblue-600 mb-2">The Big Question</h4>
+                <p class="text-xs font-semibold">Can sukuna_v2 orchestrate multiple agents to build a real application using AGORA methodology?</p>
+                <p class="text-xs mt-1"><strong>Answer:</strong> YES for single agents, NEEDS WORK for parallel.</p>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Research References</h2>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            Rooted draws from several research areas in AI, multi-agent systems, and learning science:
+          </p>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              VL-JEPA: Vision-Language Joint Embedding Predictive Architecture
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm">
+              <p class="mb-3">Yann LeCun's research on JEPA (Joint Embedding Predictive Architecture) vs traditional autoregressive models. VL-JEPA outperforms multimodal LLMs on vision-language tasks by predicting abstract representations rather than generating tokens.</p>
+              <p class="mb-3"><strong>Source:</strong> <a href="https://arxiv.org/abs/2512.10942" class="text-tan-600 hover:underline">arXiv:2512.10942</a> — Chen, Shukor, Moutakanni, et al. (Meta FAIR, HKUST, Sorbonne, NYU)</p>
+              <p><strong>Relevance:</strong> JEPA's "predict abstract representations" mirrors Rooted's approach — predicting what question will push thinking deeper, not generating an answer.</p>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Energy-Based Models for AI Reasoning
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm">
+              <p class="mb-3">Research on using Energy-Based Models for reasoning beyond LLM limitations. EBMs score possible outcomes rather than generating sequences — enabling reasoning about which answer is most likely correct.</p>
+              <p class="mb-3"><strong>Source:</strong> <a href="https://logicalintelligence.com/blog/energy-based-models-for-reasoning" class="text-tan-600 hover:underline">Logical Intelligence</a> — "Energy-Based Fine-Tuning of Language Models" (arXiv:2603.12248)</p>
+              <p><strong>Relevance:</strong> The EBM scoring system used in sukuna_v2 (Mahoraga) scored agent outputs and triggered regeneration when quality was low. This scoring approach informs Rooted's question selection.</p>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              MCP & Multi-Agent Systems
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm">
+              <p class="mb-3">Anthropic's Model Context Protocol (MCP) enables AI models to connect with external tools and data sources. Google's A2A protocol enables agent-to-agent communication.</p>
+              <p class="mb-3"><strong>Source:</strong> <a href="https://blogs.cisco.com/developer/the-silent-role-of-mathematics-and-algorithms-in-mcp-multi-agent-systems" class="text-tan-600 hover:underline">Cisco Blog</a> — "The Silent Role of Mathematics and Algorithms in MCP & Multi-Agent Systems"</p>
+              <p class="mb-3"><strong>Source:</strong> <a href="https://arxiv.org/html/2504.21030v1" class="text-tan-600 hover:underline">arXiv:2504.21030</a> — "Advancing Multi-Agent Systems Through Model Context Protocol"</p>
+              <p><strong>Relevance:</strong> Rooted's fleet orchestration builds on MCP architecture while adding the A2A-style Covenant Protocol for agent communication.</p>
+            </div>
+          </details>
+
+          <details class="bg-white border border-beige-300 rounded-lg mb-4">
+            <summary class="px-4 py-3 cursor-pointer font-semibold text-darkblue-500 hover:bg-beige-50">
+              Desirable Difficulty & Educational Research
+            </summary>
+            <div class="px-4 py-3 border-t border-beige-200 text-navy-600 text-sm">
+              <p class="mb-3">The educational concept that making learning slightly harder in the right ways produces deeper retention, stronger understanding, and more transferable skill. The struggle is not a bug — it is the mechanism.</p>
+              <p class="mb-3"><strong>Key insight:</strong> Rooted is a "desirable difficulty machine" — it preserves the productive struggle that builds real capability.</p>
+              <p><strong>Relevance:</strong> This research validates why Rooted's "never give answers" constraint isn't just a design choice — it's grounded in how humans actually learn.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="border-t border-beige-300 pt-8">
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Current Status</h2>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            Rooted is currently in active development. The architecture has been designed, the fleet orchestration system is being prototyped, and the Leptos + SpacetimeDB stack has been validated through experiments.
+          </p>
+          <p class="text-navy-600 leading-relaxed mb-6">
+            The core loop works in isolation. Next steps: integrating SpacetimeDB for real-time session management, implementing the Wave Protocol for multi-agent coordination, and building the canvas UI.
+          </p>
+          
+          <h3 class="font-semibold text-darkblue-500 mb-3">Development Roadmap</h3>
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center gap-3">
+              <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+              <span class="text-navy-600">Architecture Design & D2 Diagrams</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-3 h-3 bg-tan-500 rounded-full"></span>
+              <span class="text-navy-600">Fleet Orchestration Prototype (Rust MCP)</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-3 h-3 bg-beige-300 rounded-full"></span>
+              <span class="text-navy-600">SpacetimeDB Integration</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-3 h-3 bg-beige-200 rounded-full"></span>
+              <span class="text-navy-600">Leptos Canvas UI</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="w-3 h-3 bg-beige-200 rounded-full"></span>
+              <span class="text-navy-600">User Testing & Iteration</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-beige-300 pt-8">
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Tech Stack</h2>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-darkblue-500 text-beige-100 rounded-full text-sm font-medium">Leptos</span>
+            <span class="px-4 py-2 bg-darkblue-500 text-beige-100 rounded-full text-sm font-medium">Rust</span>
+            <span class="px-4 py-2 bg-darkblue-500 text-beige-100 rounded-full text-sm font-medium">WASM</span>
+            <span class="px-4 py-2 bg-darkblue-500 text-beige-100 rounded-full text-sm font-medium">SpacetimeDB</span>
+            <span class="px-4 py-2 bg-darkblue-500 text-beige-100 rounded-full text-sm font-medium">Gemini Vision</span>
+            <span class="px-4 py-2 bg-darkblue-500 text-beige-100 rounded-full text-sm font-medium">OpenRouter</span>
+            <span class="px-4 py-2 bg-darkblue-500 text-beige-100 rounded-full text-sm font-medium">HTML5 Canvas</span>
+            <span class="px-4 py-2 bg-darkblue-500 text-beige-100 rounded-full text-sm font-medium">SQLite</span>
+          </div>
+        </div>
+
+        <div class="border-t border-beige-300 pt-8">
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Links</h2>
+          <div class="flex flex-wrap gap-4">
+            <a 
+              href="/projects"
+              class="inline-flex items-center px-6 py-3 border border-darkblue-500 text-darkblue-500 font-medium rounded-lg hover:bg-darkblue-500 hover:text-beige-100 transition-colors"
+            >
+              Back to Projects
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-darkblue-500 text-beige-100 rounded-xl p-8 text-center mt-8">
+          <p class="text-xl font-bold mb-2">Build the fingers first.</p>
+          <p class="text-beige-300">Rooted — 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Modal/Lightbox -->
+  <div id="image-modal" class="fixed inset-0 bg-black/95 z-50 hidden items-center justify-center p-4" onclick="if(event.target === this) closeModal()">
+    <button id="modal-close" class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center text-white hover:text-tan-400 text-3xl font-bold bg-darkblue-500/50 rounded-full hover:bg-darkblue-500/80 transition-colors">&times;</button>
+    <button id="modal-expand" class="absolute top-4 right-16 w-10 h-10 flex items-center justify-center text-white hover:text-tan-400 text-2xl bg-darkblue-500/50 rounded-full hover:bg-darkblue-500/80 transition-colors" title="Open full size">⛶</button>
+    <img id="modal-image" src="" alt="" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl" onclick="closeModal()" style="cursor: zoom-out;" />
+    <p id="modal-caption" class="text-beige-300 text-center mt-4 text-lg"></p>
+  </div>
+
+  <script>
+    function openModal(src, alt) {
+      const modal = document.getElementById('image-modal');
+      const modalImg = document.getElementById('modal-image');
+      const caption = document.getElementById('modal-caption');
+      const closeBtn = document.getElementById('modal-close');
+      const expandBtn = document.getElementById('modal-expand');
+      if (modal && modalImg) {
+        modalImg.src = src;
+        modalImg.alt = alt;
+        if (caption) caption.textContent = alt;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        closeBtn.onclick = closeModal;
+        expandBtn.onclick = () => window.open(src, '_blank');
+        modalImg.onclick = closeModal;
+      }
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('image-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+
+    // Add click handlers to all case study images
+    document.querySelectorAll('.case-study-img').forEach(img => {
+      img.style.cursor = 'zoom-in';
+      img.parentElement.style.position = 'relative';
+      // Add expand icon overlay
+      const icon = document.createElement('span');
+      icon.innerHTML = '⛶';
+      icon.className = 'expand-icon';
+      icon.style.cssText = 'position: absolute; top: 8px; right: 8px; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: rgba(26, 54, 93, 0.8); color: #e8dcc8; border-radius: 6px; font-size: 18px; opacity: 0; transition: opacity 0.2s; pointer-events: none;';
+      img.parentElement.appendChild(icon);
+      img.parentElement.onmouseenter = () => icon.style.opacity = '1';
+      img.parentElement.onmouseleave = () => icon.style.opacity = '0';
+      img.addEventListener('click', () => {
+        openModal(img.src, img.alt);
+      });
+    });
+
+    // Close modal on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</BaseLayout>

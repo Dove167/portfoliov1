@@ -1,0 +1,68 @@
+direction: right
+title: "Rooted - Three Column Layout"
+
+# Header
+header: "[ + New Page ]" {
+  style.fill: "#1a1a2e"
+  style.font-color: "#ffffff"
+}
+
+# Pages (Left)
+pages: Pages {
+  width: 150
+  style.fill: "#f8f9fa"
+  style.stroke: "#dee2e6"
+  
+  p1: "\"12 ÷ 3\""
+  p2: "\"add(a,b)\""
+  p3: "\"x² + 7x\""
+}
+
+# Canvas (Middle)  
+canvas: Canvas {
+  width: 280
+  style.fill: "#ffffff"
+  style.font-color: "#1a1a2e"
+  
+  area: "" {
+    shape: rectangle
+    style.fill: "#ffffff"
+    style.stroke: "#e94560"
+    style.stroke-width: 3
+  }
+  
+  tools: "[ Pen ] [ Eraser ] [ Clear ]"
+  
+  submit: "[ 🌱 Submit ]" {
+    style.fill: "#e94560"
+    style.font-color: "#ffffff"
+  }
+}
+
+# Conversation (Right)
+conv: Conversation {
+  width: 220
+  style.fill: "#f8f9fa"
+  style.stroke: "#dee2e6"
+  
+  u1: "🖼️ [drawing]" {
+    style.fill: "#e94560"
+    style.font-color: "#ffffff"
+  }
+  u1txt: "\"I don't get division\""
+  
+  q1: "🌱 If you had 12 cookies and 3 friends..."
+  
+  u2: "🖼️ [drawing]" {
+    style.fill: "#e94560"
+    style.font-color: "#ffffff"
+  }
+  u2txt: "\"like sharing?\""
+  
+  q2: "🌱 Exactly — so if you shared equally..."
+}
+
+# Connections
+header -> pages
+pages -> canvas: "draw"
+canvas -> conv: "submit"

@@ -1,0 +1,109 @@
+direction: right
+title: "Rooted - Full System Architecture"
+
+# Frontend Layer
+frontend: {
+  label: "Leptos Frontend (WASM)"
+  style.fill: "#1a1a2e"
+  style.font-color: "#e94560"
+  style.font-size: 16
+  
+  pages: {
+    label: "Page List"
+    style.fill: "#0f3460"
+    style.stroke: "#e94560"
+    style.font-color: "#eaeaea"
+  }
+  
+  canvas: {
+    label: "Canvas"
+    style.fill: "#faf9f6"
+    style.stroke: "#e94560"
+    style.font-color: "#1a1a2e"
+  }
+  
+  conv: {
+    label: "Conversation"
+    style.fill: "#0f3460"
+    style.stroke: "#e94560"
+    style.font-color: "#eaeaea"
+  }
+}
+
+# Database Layer
+db: {
+  label: "SpacetimeDB 2.0"
+  style.fill: "#1a1a2e"
+  style.stroke: "#4ecca3"
+  style.font-color: "#4ecca3"
+  style.font-size: 16
+  
+  session: {
+    label: "Session Table"
+    shape: sql_table
+    style.fill: "#0f3460"
+    style.stroke: "#4ecca3"
+    style.font-color: "#eaeaea"
+    session_id: "u64 [pk]"
+    user_id: "u64"
+    drawing: "String"
+  }
+  
+  feedback: {
+    label: "Question Feedback"
+    shape: sql_table
+    style.fill: "#0f3460"
+    style.stroke: "#4ecca3"
+    style.font-color: "#eaeaea"
+    q_id: "u64 [pk]"
+    helped: "bool"
+    pattern: "String"
+  }
+}
+
+# Orchestration Layer
+orch: {
+  label: "Orchestration Layer (Rust MCP)"
+  style.fill: "#1a1a2e"
+  style.font-color: "#e94560"
+  style.font-size: 16
+  
+  gemini: {
+    label: "Gemini Vision"
+    style.fill: "#0f3460"
+    style.stroke: "#e94560"
+    style.font-color: "#eaeaea"
+  }
+  
+  router: {
+    label: "OpenRouter"
+    style.fill: "#0f3460"
+    style.stroke: "#e94560"
+    style.font-color: "#eaeaea"
+  }
+  
+  wisdom: {
+    label: "SQLite Wisdom"
+    style.fill: "#0f3460"
+    style.stroke: "#e94560"
+    style.font-color: "#eaeaea"
+  }
+  
+  covenant: {
+    label: "Never Give Answers"
+    style.fill: "#e94560"
+    style.font-color: "#ffffff"
+    style.font-size: 14
+  }
+}
+
+# Connections
+frontend.canvas -> db.session: "save"
+db.feedback -> frontend.conv: "history"
+
+db.session -> orch.gemini: "drawing"
+db.feedback -> orch.wisdom: "feedback"
+orch.gemini -> orch.router: "context"
+orch.wisdom -> orch.router: "prior"
+orch.router -> orch.covenant: "check"
+orch.covenant -> frontend.conv: "🌱 question"

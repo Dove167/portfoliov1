@@ -1,0 +1,129 @@
+direction: right
+
+title: "Rooted - Three Column Layout"
+
+# Main Container
+Rooted: {
+  shape: rectangle
+  style.fill: "#1a1a2e"
+  style.stroke: "#16213e"
+  label: "🌱 Rooted"
+  label.style.font-color: "#eaeaea"
+
+  # Header bar
+  header: "[+ New Page]"
+  header.style.fill: "#0f3460"
+  header.style.font-color: "#e94560"
+  header.shape: rectangle
+}
+
+# Left Column - Pages
+Pages: {
+  shape: rectangle
+  style.fill: "#16213e"
+  style.stroke: "#0f3460"
+  width: 200
+
+  Page_1: "\"12 ÷ 3\""
+  Page_2: "\"add(a,b)\""
+  Page_3: "\"x² + 7x\""
+
+  Page_1.style.fill: "#0f3460"
+  Page_1.style.font-color: "#eaeaea"
+  Page_2.style.fill: "#0f3460"
+  Page_2.style.font-color: "#eaeaea"
+  Page_3.style.fill: "#0f3460"
+  Page_3.style.font-color: "#eaeaea"
+}
+
+# Middle Column - Canvas
+Canvas: {
+  shape: rectangle
+  style.fill: "#faf9f6"
+  style.stroke: "#16213e"
+  width: 400
+
+  canvas_box: ""
+  canvas_box.shape: rectangle
+  canvas_box.style.fill: "#ffffff"
+  canvas_box.style.stroke: "#e94560"
+  canvas_box.style.stroke-width: 2
+
+  prompt: "\"what are you thinking about...\""
+  prompt.style.fill: "#f0f0f0"
+  prompt.style.font-color: "#666"
+  prompt.shape: rectangle
+
+  tools: "[Pen] [Eraser] [Clear]"
+  tools.style.fill: "#16213e"
+  tools.style.font-color: "#eaeaea"
+  tools.shape: rectangle
+
+  submit: "[🌱 Submit]"
+  submit.style.fill: "#e94560"
+  submit.style.font-color: "#ffffff"
+  submit.shape: rectangle
+}
+
+# Right Column - Conversation
+Conversation: {
+  shape: rectangle
+  style.fill: "#16213e"
+  style.stroke: "#0f3460"
+  width: 320
+
+  user_turn_1: {
+    shape: rectangle
+    style.fill: "#0f3460"
+
+    drawing_1: "🖼️ [drawing]"
+    drawing_1.shape: rectangle
+    drawing_1.style.fill: "#e94560"
+    drawing_1.style.font-color: "#ffffff"
+
+    text_1: "\"I don't get division\""
+    text_1.shape: rectangle
+    text_1.style.fill: "#0f3460"
+    text_1.style.font-color: "#eaeaea"
+  }
+
+  root_turn_1: {
+    shape: rectangle
+    style.fill: "#16213e"
+
+    question_1: "🌱 If you had 12 cookies and 3 friends..."
+    question_1.shape: rectangle
+    question_1.style.fill: "#16213e"
+    question_1.style.font-color: "#eaeaea"
+  }
+
+  user_turn_2: {
+    shape: rectangle
+    style.fill: "#0f3460"
+
+    drawing_2: "🖼️ [drawing 2]"
+    drawing_2.shape: rectangle
+    drawing_2.style.fill: "#e94560"
+    drawing_2.style.font-color: "#ffffff"
+
+    text_2: "\"like sharing?\""
+    text_2.shape: rectangle
+    text_2.style.fill: "#0f3460"
+    text_2.style.font-color: "#eaeaea"
+  }
+
+  root_turn_2: {
+    shape: rectangle
+    style.fill: "#16213e"
+
+    question_2: "🌱 Exactly — so if you shared equally..."
+    question_2.shape: rectangle
+    question_2.style.fill: "#16213e"
+    question_2.style.font-color: "#eaeaea"
+  }
+}
+
+# Arrows connecting columns
+Rooted.header -> Pages
+Pages -> Canvas: "user draws"
+Canvas -> Conversation: "question"

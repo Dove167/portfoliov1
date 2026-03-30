@@ -1,0 +1,83 @@
+direction: right
+title: "Fleet Orchestration - Core Loop"
+
+# Wave 1 - Parallel Agents
+wave1: {
+  label: "Wave 1: Parallel Perception"
+  style.fill: "#e94560"
+  style.font-color: "#ffffff"
+  style.font-size: 18
+  
+  gemini: {
+    label: "Gemini Vision\nReads the drawing"
+    style.fill: "#0f3460"
+    style.stroke: "#e94560"
+    style.font-color: "#eaeaea"
+  }
+  
+  memory: {
+    label: "Episodic Memory\nWhat did we discuss?"
+    style.fill: "#0f3460"
+    style.stroke: "#e94560"
+    style.font-color: "#eaeaea"
+  }
+  
+  wisdom: {
+    label: "Wisdom DB\nWhat worked before?"
+    style.fill: "#0f3460"
+    style.stroke: "#e94560"
+    style.font-color: "#eaeaea"
+  }
+}
+
+# Synthesizer
+synth: {
+  label: "SYNTHESIZER\n\n\"Given all this,\nwhat is ONE question\nthat goes deepest?\""
+  shape: rectangle
+  width: 180
+  style.fill: "#e94560"
+  style.font-color: "#ffffff"
+  style.font-size: 16
+}
+
+# Covenant Check
+check: {
+  label: "Does it give\nan answer?"
+  shape: diamond
+  width: 120
+  height: 80
+  style.fill: "#16213e"
+  style.stroke: "#e94560"
+  style.font-color: "#eaeaea"
+}
+
+# Output
+out: {
+  label: "🌱 ONE QUESTION"
+  width: 140
+  style.fill: "#0f3460"
+  style.stroke: "#4ecca3"
+  style.stroke-width: 3
+  style.font-color: "#4ecca3"
+  style.font-size: 16
+}
+
+# Regenerate
+regen: {
+  label: "↺ Regenerate"
+  width: 100
+  style.fill: "#e94560"
+  style.font-color: "#ffffff"
+  style.font-size: 14
+}
+
+# Connections
+wave1.gemini -> synth
+wave1.memory -> synth
+wave1.wisdom -> synth
+
+synth -> check
+
+check -> out: "No"
+check -> regen: "Yes"
+regen -> wave1: "Loop"
