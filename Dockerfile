@@ -10,7 +10,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Build Rust backend
-FROM rust:1.84 AS rust-build
+FROM rust:latest AS rust-build
 
 WORKDIR /app/backend
 COPY backend/Cargo.toml .
