@@ -16,7 +16,7 @@ The atmospheric effects include scanlines, glitch text, and a terminal-style UI 
       "/images/work/Liminal_void4.png"
     ],
     tags: ["Astro", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Zustand"],
-    github: "https://github.com/jpfaj/liminal-void",
+    github: null,
     demo: "https://liminal-void.fly.dev",
     featured: true
   },
@@ -39,16 +39,34 @@ Designed Figma prototypes and translated them into a responsive, accessible UI w
     featured: true
   },
   {
-    title: "Rooted",
-    description: `Designing a thinking tool that makes you think first — using AI fleet orchestration to ask, never answer.
+    title: "Strata Reserve Planning (SRP)",
+    description: `A data collection portal for Strata Reserve Planning, managing inspections, surveys, documents, and timelines across multiple user roles (Admin, Inspector, Client, Assistant).
 
-Rooted applies multi-agent orchestration to Socratic questioning. The system uses Leptos + SpacetimeDB for a real-time canvas experience, Gemini Vision to read user drawings, and OpenRouter-powered agents that generate one question at a time. The key constraint: the AI NEVER gives answers, only questions that push thinking one layer deeper.`,
+Built with a React 19 frontend and a Hono + Prisma backend, supporting role-based access control, appointment scheduling, document management, and automated email notifications.`,
     images: [
-      "/images/case-study/rooted/rooted_ui_v2.png"
+      "/strata_pic.png"
     ],
-    tags: ["Leptos", "Rust", "WASM", "SpacetimeDB", "Gemini Vision", "OpenRouter", "Fleet Orchestration"],
-    github: "#",
-    demo: "/case-study/rooted",
+    tags: ["React 19", "TypeScript", "Vite", "Supabase", "SCSS", "dnd-kit", "Hono", "Prisma", "PostgreSQL"],
+    github: "https://github.com/IDSP-Strata-Reserve-Planning",
+    demo: "https://srp.builtbyrobyn.com/login",
+    featured: true
+  },
+  {
+    title: "Bandit Breakout",
+    description: `A multiplayer online board game where players battle NPCs and other players to reach the finish line first. Choose from different characters, each with unique abilities. Combat is resolved through dice rolls combined with power-ups you collect along the way.
+
+Navigate the board, interact with NPCs to purchase items or make critical decisions that can help or hurt your progress. Strategic choices, luck of the roll, and tactical power-up management determine who crosses the finish line victorious.
+
+Built with Phaser.js for the game engine, TypeScript for type-safe code, Socket.IO for real-time multiplayer event-based communication, MongoDB for persistent game state, and Redis for real-time game state caching and room management.`,
+    images: [
+      "/bandit_breakout1.png",
+      "/bandit_breakout2.png",
+      "/bandit_breakout3.png",
+      "/map_bandit.png"
+    ],
+    tags: ["Phaser.js", "TypeScript", "Socket.IO", "MongoDB", "Redis", "Real-time Multiplayer"],
+    github: "https://github.com/BB-CommandZ/BanditBreakout/tree/main",
+    demo: "http://commandz.gochatus.org:30006/",
     featured: true
   },
   {

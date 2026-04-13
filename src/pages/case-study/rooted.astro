@@ -8,10 +8,23 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
       <p class="text-tan-400 font-medium mb-2">Case Study</p>
       <h1 class="text-4xl md:text-5xl font-bold mb-6">Rooted</h1>
       <p class="text-beige-300 text-xl max-w-2xl mb-4">
-        The thinking tool that makes you think first — using AI fleet orchestration to ask, never answer.
+        The thinking tool that makes you think first — Socratic AI that asks, never answers.
       </p>
-      <div class="inline-block bg-tan-500/20 text-tan-300 px-4 py-2 rounded-lg">
-        <p class="text-sm font-medium">Role: Full Stack Developer & AI Orchestrator — Designing fleet architecture and Socratic questioning system</p>
+      <div class="flex flex-wrap gap-3 mt-4">
+        <a 
+          href="https://rooted-ai.fly.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center space-x-2 px-6 py-3 bg-tan-500 text-darkblue-900 font-semibold rounded-lg hover:bg-tan-400 transition-all shadow-md"
+        >
+          <span>Try Rooted</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+          </svg>
+        </a>
+        <div class="inline-block bg-tan-500/20 text-tan-300 px-4 py-2 rounded-lg">
+          <p class="text-sm font-medium">Role: Full Stack Developer — Leptos, SpacetimeDB, Axum, OpenRouter</p>
+        </div>
       </div>
     </div>
   </section>
@@ -82,6 +95,93 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
         </div>
 
         <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Current Version</h2>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            The current version of Rooted implements the core Socratic loop — draw, think, ask. It uses a custom shape detector for math expressions and Gemini Vision for fallback analysis. The architecture is built for fleet orchestration, waiting for the agent research swarm to be implemented.
+          </p>
+          
+          <div class="bg-darkblue-500 p-6 lg:p-8 rounded-xl mb-6">
+            <div class="relative aspect-video rounded-xl overflow-hidden bg-darkblue-600 shadow-lg">
+              <img 
+                id="rooted-version-main-0"
+                src="/Rooted_AI_Version1.png" 
+                alt="Rooted AI Version 1"
+                class="w-full h-full object-cover absolute inset-0 transition-opacity duration-300 opacity-100"
+              />
+              <img 
+                id="rooted-version-main-1"
+                src="/Rooted_current_state.png" 
+                alt="Rooted Current State"
+                class="w-full h-full object-cover absolute inset-0 transition-opacity duration-300 opacity-0"
+              />
+              <img 
+                id="rooted-version-main-2"
+                src="/Rooted_works_v2.png" 
+                alt="Rooted Works v2"
+                class="w-full h-full object-cover absolute inset-0 transition-opacity duration-300 opacity-0"
+              />
+              
+              <button 
+                class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-darkblue-900/80 hover:bg-darkblue-900 text-beige-100 rounded-full flex items-center justify-center transition-all shadow-lg"
+                onclick="prevImage('rooted-version', 3)"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </button>
+              <button 
+                class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-darkblue-900/80 hover:bg-darkblue-900 text-beige-100 rounded-full flex items-center justify-center transition-all shadow-lg"
+                onclick="nextImage('rooted-version', 3)"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+            
+            <div class="flex gap-2 mt-4 overflow-x-auto pb-2">
+              <button 
+                class="flex-shrink-0 w-20 h-14 rounded-lg overflow-hidden border-2 border-tan-500 transition-all"
+                onclick="selectImage('rooted-version', 0)"
+                data-thumbnail="rooted-version-0"
+              >
+                <img 
+                  src="/Rooted_AI_Version1.png" 
+                  alt="Thumbnail 1"
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button 
+                class="flex-shrink-0 w-20 h-14 rounded-lg overflow-hidden border-2 border-transparent hover:border-tan-500/50 transition-all"
+                onclick="selectImage('rooted-version', 1)"
+                data-thumbnail="rooted-version-1"
+              >
+                <img 
+                  src="/Rooted_current_state.png" 
+                  alt="Thumbnail 2"
+                  class="w-full h-full object-cover"
+                />
+              </button>
+              <button 
+                class="flex-shrink-0 w-20 h-14 rounded-lg overflow-hidden border-2 border-transparent hover:border-tan-500/50 transition-all"
+                onclick="selectImage('rooted-version', 2)"
+                data-thumbnail="rooted-version-2"
+              >
+                <img 
+                  src="/Rooted_works_v2.png" 
+                  alt="Thumbnail 3"
+                  class="w-full h-full object-cover"
+                />
+              </button>
+            </div>
+            
+            <p class="text-center text-beige-300 text-sm mt-3">
+              <span id="rooted-version-counter">1</span> / 3
+            </p>
+          </div>
+        </div>
+
+        <div>
           <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Vision</h2>
           <p class="text-navy-600 leading-relaxed mb-4">
             Rooted is a notebook. But the notebook thinks back.
@@ -119,46 +219,278 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
           <div class="grid md:grid-cols-2 gap-4 mb-6">
             <div class="bg-white border border-beige-300 p-4 rounded-lg">
               <h3 class="font-semibold text-darkblue-500 mb-2">Frontend</h3>
-              <p class="text-navy-600 text-sm">Leptos — Rust/WASM frontend, fast as a compiled native app. Native HTML5 Canvas for the infinite sketchpad.</p>
+              <p class="text-navy-600 text-sm">Leptos — Rust/WASM frontend, fast as a compiled native app. Native HTML5 Canvas for the infinite sketchpad. SpacetimeDB client syncs pages and messages in real-time.</p>
             </div>
             <div class="bg-white border border-beige-300 p-4 rounded-lg">
-              <h3 class="font-semibold text-darkblue-500 mb-2">Database</h3>
-              <p class="text-navy-600 text-sm">SpacetimeDB 2.0 — database and server in one, real-time state sync, no separate backend needed.</p>
+              <h3 class="font-semibold text-darkblue-500 mb-2">Backend: Axum + SpacetimeDB</h3>
+              <p class="text-navy-600 text-sm"><strong>Axum</strong> handles the /api/submit-canvas endpoint — runs ShapeDetector ML, manages OpenRouter API calls, and enforces the Socratic prompt. <strong>SpacetimeDB</strong> persists pages, canvas PNGs, and conversation messages with real-time WebSocket sync to all clients.</p>
             </div>
             <div class="bg-white border border-beige-300 p-4 rounded-lg">
-              <h3 class="font-semibold text-darkblue-500 mb-2">Vision</h3>
-              <p class="text-navy-600 text-sm">Gemini Vision — reads what the user draws on the canvas to understand their thinking.</p>
+              <h3 class="font-semibold text-darkblue-500 mb-2">Vision Analysis</h3>
+              <p class="text-navy-600 text-sm">Custom ShapeDetector ML (no external libraries) recognizes digits 0-9 and operators (+, -, ×, =). Falls back to Gemini Vision when confidence &lt; 70%.</p>
             </div>
             <div class="bg-white border border-beige-300 p-4 rounded-lg">
               <h3 class="font-semibold text-darkblue-500 mb-2">AI Agent</h3>
-              <p class="text-navy-600 text-sm">OpenRouter — powers the Socratic agent that generates one question at a time.</p>
+              <p class="text-navy-600 text-sm">OpenRouter routes to google/gemini-3.1-flash-lite-preview. The ~2000-token system prompt defines the Socratic "Rooted" persona that never gives answers.</p>
             </div>
           </div>
         </div>
 
         <div>
-          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Fleet Orchestration System</h2>
-          <p class="text-navy-600 leading-relaxed mb-6">
-            The heart of Rooted is the fleet orchestration system — multiple AI agents working in parallel to generate the best possible question. This approach evolved from building MCP servers and learning orchestration through fire.
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">How It Works: The Technical Pipeline</h2>
+          
+          <h3 class="font-semibold text-darkblue-500 mb-3">1. Canvas Drawing (Leptos + HTML5 Canvas)</h3>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            The frontend is built with <strong>Leptos</strong>, a Rust-based reactive web framework that compiles to WebAssembly. Users draw on an HTML5 Canvas element using two tools: pen (black strokes) and eraser (white strokes). Every 500ms, the canvas state is polled and synced to SpacetimeDB for persistence.
           </p>
           
-          <h3 class="font-semibold text-darkblue-500 mb-3">The Core Loop</h3>
-          <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-beige-200 p-6 mb-6 relative">
-            <img 
-              src="/images/case-study/rooted/fleetv2_ui.png" 
-              alt="Fleet Orchestration Core Loop" 
-              class="w-full h-auto rounded-lg case-study-img hover:opacity-90 transition-opacity cursor-zoom-in"
-            />
+          <h3 class="font-semibold text-darkblue-500 mb-3">2. Canvas Submission to Backend</h3>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            When the user types their intent (what they're stuck on) and clicks submit, the canvas is converted to a PNG and encoded as base64. The request includes:
+          </p>
+          <ul class="list-disc pl-6 text-navy-600 mb-4 space-y-1">
+            <li><code>page_id</code> — which page this belongs to</li>
+            <li><code>image_base64</code> — the PNG canvas drawing</li>
+            <li><code>intent</code> — what the student typed ("I'm trying to factor x² + 7x + 10")</li>
+            <li><code>history</code> — previous conversation messages for context</li>
+          </ul>
+
+          <h3 class="font-semibold text-darkblue-500 mb-3">3. Backend Processing (Axum + Rust)</h3>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            The <strong>Axum</strong> server receives the request at <code>/api/submit-canvas</code>. The backend:
+          </p>
+          <ol class="list-decimal pl-6 text-navy-600 mb-4 space-y-1">
+            <li>Extracts the base64 image and decodes it to PNG</li>
+            <li>Runs the <strong>ShapeDetector</strong> — custom template-matching ML that recognizes digits 0-9 and operators (+, -, ×, =)</li>
+            <li>Calculates a confidence score (0% to 95%)</li>
+            <li>If confidence ≥ 70%, uses the detected expression in the prompt without sending the image</li>
+            <li>If confidence &lt; 70%, processes the image (resize to 1600×1200, +20 contrast) and sends it to Gemini Vision</li>
+          </ol>
+
+          <h3 class="font-semibold text-darkblue-500 mb-3">4. The ShapeDetector: Custom ML Without External Libraries</h3>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            The <code>ShapeDetector</code> analyzes strokes using pure geometry calculations — no TensorFlow or ONNX dependencies. Each stroke extracts ~18 features:
+          </p>
+          <div class="grid md:grid-cols-3 gap-3 mb-4">
+            <div class="bg-beige-50 p-3 rounded text-sm">
+              <strong>Shape Features:</strong> aspect ratio, circularity, density
+            </div>
+            <div class="bg-beige-50 p-3 rounded text-sm">
+              <strong>Direction:</strong> horizontal, vertical, diagonal, curved
+            </div>
+            <div class="bg-beige-50 p-3 rounded text-sm">
+              <strong>Topology:</strong> closed loops, endpoints, bends
+            </div>
+          </div>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            Template matching compares these features against expected digit profiles. For example, "0" has high circularity and one stroke; "4" has two strokes at right angles.
+          </p>
+
+          <h3 class="font-semibold text-darkblue-500 mb-3">5. The Two-Tier Vision Strategy</h3>
+          <div class="bg-darkblue-500 text-beige-100 rounded-xl p-6 mb-4">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div>
+                <h4 class="font-semibold mb-2">ML Detection (High Confidence)</h4>
+                <p class="text-sm">Confidence ≥ 70% → Skip sending image to AI, include detected expression in text prompt. Saves tokens, reduces latency, lowers cost.</p>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-2">Vision Fallback (Low Confidence)</h4>
+                <p class="text-sm">Confidence &lt; 70% → Process image (resize + contrast), send to Gemini Vision for semantic understanding of the drawing.</p>
+              </div>
+            </div>
           </div>
 
-          <h3 class="font-semibold text-darkblue-500 mb-3">Architecture Diagram</h3>
-          <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-beige-200 p-6 mb-6 relative">
-            <img 
-              src="/images/case-study/rooted/rooted_architecturev2.png" 
-              alt="Rooted System Architecture" 
-              class="w-full h-auto rounded-lg case-study-img hover:opacity-90 transition-opacity cursor-zoom-in"
-            />
+          <h3 class="font-semibold text-darkblue-500 mb-3">6. The Socratic AI Persona (System Prompt)</h3>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            The AI is defined by a ~2000-token system prompt that enforces two strict modes:
+          </p>
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div class="bg-tan-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-darkblue-500 mb-2">Thinking Mode</h4>
+              <p class="text-sm">Drawing detected → Describe briefly (1 sentence) → Ask ONE diagnostic question → Never give answers</p>
+            </div>
+            <div class="bg-beige-100 p-4 rounded-lg">
+              <h4 class="font-semibold text-darkblue-500 mb-2">Conversation Mode</h4>
+              <p class="text-sm">Blank canvas / casual chat → Talk naturally → Gently invite drawing if lost → Never robotically describe blank canvas</p>
+            </div>
           </div>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            <strong>Key invariant:</strong> The AI must NEVER describe a drawing that isn't there. If the canvas is blank, say so or skip the description entirely.
+          </p>
+
+          <h3 class="font-semibold text-darkblue-500 mb-3">7. Data Flow Diagram</h3>
+          <div class="bg-white border border-beige-300 rounded-xl p-6 mb-4">
+            <pre class="text-xs overflow-x-auto text-navy-600">CLIENT (Browser/WASM)
+  Canvas Drawing (base64 PNG) + Intent + History
+           │
+           │ POST /api/submit-canvas
+           ▼
+AXUM BACKEND (Rust)
+  1. Decode base64 → PNG
+  2. ShapeDetector.analyze() → expression + confidence
+  3. If confidence ≥ 70% → text only
+     If confidence &lt; 70% → resize + contrast → send to Vision
+           │
+           ▼
+OPENROUTER API
+  Model: google/gemini-3.1-flash-lite-preview
+  System prompt enforces Socratic persona
+           │
+           ▼
+RESPONSE
+  Extract question from choices[0].message.content
+  Return: &#123; "question": "..." &#125;</pre>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">SpacetimeDB: Real-Time Persistence</h2>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            <strong>SpacetimeDB</strong> provides the database layer — both server and real-time sync in one. The frontend connects via WebSocket to <code>maincloud.spacetimedb.com</code>.
+          </p>
+          
+          <h3 class="font-semibold text-darkblue-500 mb-3">Data Model</h3>
+          <div class="bg-white border border-beige-300 rounded-xl p-6 mb-4">
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-semibold text-darkblue-500">Page</h4>
+                <pre class="text-xs bg-beige-50 p-2 rounded mt-1">Page {'{'}
+  id: u64,           // Auto-generated unique ID
+  owner: Identity,   // SpacetimeDB identity
+  title: String,     // "New Page"
+  canvas_png: String, // Base64-encoded canvas state
+  ai_pending: bool,  // True while waiting for AI response
+  created_at: Timestamp,
+  updated_at: Timestamp
+{'}'}</pre>
+              </div>
+              <div>
+                <h4 class="font-semibold text-darkblue-500">PageMessage</h4>
+                <pre class="text-xs bg-beige-50 p-2 rounded mt-1">PageMessage &lbrace;
+  id: u64,
+  page_id: u64,     // Links to parent Page
+  role: String,     // "user" or "assistant"
+  content: String,  // The message text
+  created_at: Timestamp
+&rbrace;</pre>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="font-semibold text-darkblue-500 mb-3">Redux-style Reducers</h3>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            SpacetimeDB uses a reducer pattern — client calls are validated server-side and committed atomically:
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
+            <div class="bg-beige-50 p-2 rounded text-center text-sm">create_page</div>
+            <div class="bg-beige-50 p-2 rounded text-center text-sm">delete_page</div>
+            <div class="bg-beige-50 p-2 rounded text-center text-sm">save_canvas</div>
+            <div class="bg-beige-50 p-2 rounded text-center text-sm">save_message</div>
+          </div>
+          <p class="text-navy-600 text-sm italic">
+            Note: The current implementation uses polling (every 500ms) for UI sync. Future versions could use direct WebSocket callbacks for true reactive updates.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Key Technical Decisions</h2>
+          
+          <div class="space-y-4">
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Custom ML Over External Libraries</h3>
+              <p class="text-navy-600 text-sm">The ShapeDetector uses pure Rust geometry calculations instead of TensorFlow/ONNX. This keeps the binary small and avoids complex WASM dependencies. The tradeoff: less accurate than modern OCR, but sufficient for the target use case (math expressions).</p>
+            </div>
+            
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Base64 Transport for Images</h3>
+              <p class="text-navy-600 text-sm">Images are encoded as base64 strings for JSON compatibility with OpenRouter's API. The backend re-encodes with processing metadata (dimensions, contrast) prepended so the frontend doesn't need to re-encode.</p>
+            </div>
+            
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Lanczos3 Resampling</h3>
+              <p class="text-navy-600 text-sm">When resizing for vision processing, Lanczos3 resampling preserves handwriting stroke characteristics better than bilinear interpolation. The 1600×1200 target balances detail with API payload size.</p>
+            </div>
+            
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Stateless Backend</h3>
+              <p class="text-navy-600 text-sm">The Axum server is stateless — conversation history is passed per-request from the frontend. This simplifies deployment but means larger request payloads. For v1 this is acceptable; future versions could use server-side sessions.</p>
+            </div>
+
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Socratic by Design, Not Just Prompt</h3>
+              <p class="text-navy-600 text-sm">The "never give answers" constraint is enforced at multiple levels: the system prompt defines the persona, but the code also validates AI responses don't contain answer indicators. This is the "Mahoraga pattern" — automatic regeneration if the constraint is violated.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Vision: Next-Generation Thinking Tool</h2>
+          <p class="text-navy-600 leading-relaxed mb-6">
+            Rooted exists at the intersection of several AI paradigms — and aims to be the next evolution that combines their strengths.
+          </p>
+          
+          <h3 class="font-semibold text-darkblue-500 mb-3">Where Rooted Fits</h3>
+          <div class="grid md:grid-cols-3 gap-4 mb-6">
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h4 class="font-semibold text-darkblue-500 mb-2">📚 NotebookLM</h4>
+              <p class="text-sm text-navy-600">Google's AI research tool that analyzes sources, creates summaries, and generates study guides. Grounded in your documents.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h4 class="font-semibold text-darkblue-500 mb-2">🔍 Perplexity</h4>
+              <p class="text-sm text-navy-600">AI search that provides direct answers with cited sources. Real-time research capabilities.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h4 class="font-semibold text-darkblue-500 mb-2">🦞 OpenClaw</h4>
+              <p class="text-sm text-navy-600">Personal AI agent with 100+ built-in skills. Connects AI to apps, browsers, and system tools.</p>
+            </div>
+          </div>
+
+          <h3 class="font-semibold text-darkblue-500 mb-3">Rooted: The Synthesis</h3>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            <strong>NotebookLM</strong> gives you AI that's grounded in your sources. <strong>Perplexity</strong> gives you real-time research. <strong>OpenClaw</strong> gives you agents that can do things. <strong>Rooted</strong> gives you a thinking partner that makes you <em>smarter</em>, not just informed.
+          </p>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            The key difference: instead of giving you answers or doing tasks for you, Rooted's agent fleet will <em>research your thinking</em> — what you understand, where the gaps are, what misconceptions you likely have — then ask you the one question that moves your understanding forward.
+          </p>
+
+          <h3 class="font-semibold text-darkblue-500 mb-3">From Failed Agent Swarms to Socratic Intelligence</h3>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            The path to Rooted's fleet architecture came through months of building agent systems that <em>broke</em> — agents that worked in isolation, produced hallucinations, or generated conflicting outputs. These iterations (documented in the journal below) taught critical lessons:
+          </p>
+          <div class="bg-tan-50 border border-tan-200 rounded-xl p-6 mb-6">
+            <div class="space-y-3">
+              <div class="flex items-start gap-3">
+                <span class="text-tan-500 font-bold">→</span>
+                <p class="text-sm text-navy-600"><strong>Agents work in isolation</strong> — 5 agents spawned → 5 DIFFERENT projects. Parallel execution ≠ collaboration.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-tan-500 font-bold">→</span>
+                <p class="text-sm text-navy-600"><strong>Shared context is everything</strong> — SQLite nodes as isolation boundaries, agents write to separate rows, eliminating conflicts.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-tan-500 font-bold">→</span>
+                <p class="text-sm text-navy-600"><strong>The system prompt is the API</strong> — LLMs do exactly what you tell them, not what you mean.</p>
+              </div>
+            </div>
+          </div>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            <strong>The breakthrough:</strong> Instead of using agents to <em>build</em> or <em>research for you</em>, Rooted uses them to <em>research your thinking</em>. Multiple agents analyze from different angles — patterns, gaps, assumptions — then synthesize into one diagnostic question.
+          </p>
+
+          <h3 class="font-semibold text-darkblue-500 mb-3">The Sukuna/Naruto Pattern</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h4 class="font-semibold text-darkblue-500 mb-1">Sukuna (Depth)</h4>
+              <p class="text-sm text-navy-600">One agent that masters the core technique — understands what you're trying to do deeply. Asks the "so what?" question.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h4 class="font-semibold text-darkblue-500 mb-1">Naruto (Parallelism)</h4>
+              <p class="text-sm text-navy-600">Multiple shadow clones, each seeing the problem from a different angle. Their combined insights merge into one question.</p>
+            </div>
+          </div>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            <strong>Future:</strong> When you ask about the distributive property, one agent explores its history, another checks common misconceptions, another finds related concepts — Rooted synthesizes into an informed question that meets you where you are.
+          </p>
         </div>
 
         <div>
@@ -241,6 +573,106 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
           <p class="text-navy-600 leading-relaxed">
             There is a concept in education called <strong>desirable difficulty.</strong> The research is clear: making learning slightly harder in the right ways produces deeper retention, stronger understanding, and more transferable skill. The struggle is not a bug. It is the mechanism.
           </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">Future Plans</h2>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            Rooted v1 is the foundation. The current implementation proves the core loop works — draw, think, ask. But the vision extends far beyond math tutoring.
+          </p>
+
+          <h3 class="font-semibold text-darkblue-500 mb-3">Near-Term Improvements</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h4 class="font-semibold text-darkblue-500 mb-2">Better Thumbnail Generation</h4>
+              <p class="text-navy-600 text-sm">Currently the sidebar shows placeholder thumbnails. Future versions will resize the canvas PNG for actual previews of each page.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h4 class="font-semibold text-darkblue-500 mb-2">Mobile Responsive Layout</h4>
+              <p class="text-navy-600 text-sm">The three-column layout needs testing and adaptation for tablet/mobile screens.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h4 class="font-semibold text-darkblue-500 mb-2">Per-Page SpacetimeDB Subscriptions</h4>
+              <p class="text-navy-600 text-sm">Replace the 500ms polling with proper WebSocket callbacks for instant UI updates.</p>
+            </div>
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h4 class="font-semibold text-darkblue-500 mb-2">Visual Polish</h4>
+              <p class="text-navy-600 text-sm">Typography refinement, smoother animations, better loading states.</p>
+            </div>
+          </div>
+
+          <h3 class="font-semibold text-darkblue-500 mb-3">Mid-Term: Agent Research Swarm</h3>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            The next evolution: Rooted's agent fleet doesn't just generate questions — it <strong>researches</strong>. When a student submits a drawing, agents fan out to gather context:
+          </p>
+          <div class="bg-darkblue-500 text-beige-100 rounded-xl p-6 mb-4">
+            <div class="grid md:grid-cols-3 gap-4">
+              <div class="text-center">
+                <p class="text-3xl mb-1">🔍</p>
+                <p class="text-sm font-semibold">Context Agent</p>
+                <p class="text-xs opacity-80">What does this topic typically trip people up on?</p>
+              </div>
+              <div class="text-center">
+                <p class="text-3xl mb-1">📐</p>
+                <p class="text-sm font-semibold">Pattern Agent</p>
+                <p class="text-xs opacity-80">What patterns in the drawing suggest their thinking level?</p>
+              </div>
+              <div class="text-center">
+                <p class="text-3xl mb-1">💡</p>
+                <p class="text-sm font-semibold">Bridge Agent</p>
+                <p class="text-xs opacity-80">What question connects where they are to where they need to go?</p>
+              </div>
+            </div>
+          </div>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            <strong>The synthesis:</strong> Instead of one generic question, the fleet produces informed questions based on actual research — not just the model's training data, but real-time exploration of related concepts, common misconceptions, and pedagogical best practices.
+          </p>
+
+          <h3 class="font-semibold text-darkblue-500 mb-3">Long-Term: Human Empowerment Interface</h3>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            Rooted as an <strong>empowerment tool</strong>, not just a learning tool. Think of it as a thinking partner for any problem:
+          </p>
+          <ul class="list-disc pl-6 text-navy-600 mb-4 space-y-1">
+            <li><strong>Decision making:</strong> "I'm trying to decide between job offers" → Draw the tradeoffs, Rooted asks about your values</li>
+            <li><strong>Planning:</strong> "We're renovating our house" → Sketch the layout, Rooted asks about flow and priorities</li>
+            <li><strong>Problem solving:</strong> "Our team keeps missing deadlines" → Diagram the process, Rooted asks what the real bottleneck is</li>
+            <li><strong>Creative work:</strong> "I want to write a novel" → Character maps, plot diagrams, Rooted asks about motivation and conflict</li>
+          </ul>
+
+          <h3 class="font-semibold text-darkblue-500 mb-3">Long-Term: The Philosophy Scales</h3>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            The vision from <em>Rooted_vision.md</em> is clear:
+          </p>
+          <blockquote class="border-l-4 border-tan-400 pl-4 italic text-navy-600 mb-4">
+            "Eventually Rooted becomes something larger than a product. It becomes a philosophy of how humans and AI should relate to each other."
+          </blockquote>
+          <div class="bg-darkblue-500 text-beige-100 rounded-xl p-6 mb-4">
+            <p class="text-xl font-bold mb-2">Not human asks, AI answers.</p>
+            <p class="text-2xl font-bold">Human thinks. AI extends.</p>
+          </div>
+          <p class="text-navy-600 leading-relaxed mb-4">
+            The calculator is extraordinary. But only if you learned to count on your fingers first. Rooted is the tool that ensures you always have fingers to count on.
+          </p>
+
+          <h3 class="font-semibold text-darkblue-500 mb-3">Technical Roadmap</h3>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <span class="bg-tan-500 text-darkblue-900 px-2 py-1 rounded text-xs font-bold">v1.1</span>
+              <p class="text-navy-600 text-sm">Improved shape detection, better confidence thresholds, cleanup of dead code in canvas_analyzer.rs</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="bg-tan-500 text-darkblue-900 px-2 py-1 rounded text-xs font-bold">v1.2</span>
+              <p class="text-navy-600 text-sm">Real WebSocket callbacks (remove polling), per-page subscriptions</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="bg-tan-500 text-darkblue-900 px-2 py-1 rounded text-xs font-bold">v2.0</span>
+              <p class="text-navy-600 text-sm">Multi-domain support: decision making, planning, creative work — beyond math</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="bg-tan-500 text-darkblue-900 px-2 py-1 rounded text-xs font-bold">v3.0</span>
+              <p class="text-navy-600 text-sm">Agent research swarm — fleet explores related concepts, misconceptions, and pedagogy before generating questions. Sukuna/Naruto fully operational.</p>
+            </div>
+          </div>
         </div>
 
         <div>
@@ -1092,6 +1524,56 @@ Wave 6: PATCH → Use SHRINE to apply changes</pre>
   </div>
 
   <script>
+    const currentImages = {};
+
+    window.selectImage = function(galleryId, imageIndex) {
+      const mainImages = document.querySelectorAll(`[id^="${galleryId}-main-"]`);
+      const thumbnails = document.querySelectorAll(`[data-thumbnail^="${galleryId}-"]`);
+      
+      mainImages.forEach((img, idx) => {
+        if (idx === imageIndex) {
+          img.classList.remove('opacity-0');
+          img.classList.add('opacity-100');
+        } else {
+          img.classList.remove('opacity-100');
+          img.classList.add('opacity-0');
+        }
+      });
+      
+      thumbnails.forEach((thumb, idx) => {
+        if (idx === imageIndex) {
+          thumb.classList.remove('border-transparent');
+          thumb.classList.add('border-tan-500');
+        } else {
+          thumb.classList.remove('border-tan-500');
+          thumb.classList.add('border-transparent');
+        }
+      });
+      
+      currentImages[galleryId] = imageIndex;
+      
+      const counter = document.getElementById(`${galleryId}-counter`);
+      if (counter) {
+        counter.textContent = (imageIndex + 1).toString();
+      }
+    }
+
+    window.nextImage = function(galleryId, totalImages) {
+      const currentIndex = currentImages[galleryId] || 0;
+      const nextIndex = (currentIndex + 1) % totalImages;
+      window.selectImage(galleryId, nextIndex);
+    }
+
+    window.prevImage = function(galleryId, totalImages) {
+      const currentIndex = currentImages[galleryId] || 0;
+      const prevIndex = (currentIndex - 1 + totalImages) % totalImages;
+      window.selectImage(galleryId, prevIndex);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      currentImages['rooted-version'] = 0;
+    });
+
     function openModal(src, alt) {
       const modal = document.getElementById('image-modal');
       const modalImg = document.getElementById('modal-image');
