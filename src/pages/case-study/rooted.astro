@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import HallucinationChart from "@/components/fundations/HallucinationChart";
+import DesirableDifficultyChart from "@/components/fundations/DesirableDifficultyChart";
 ---
 
 <BaseLayout title="Rooted Case Study - Josh Fajardo">
@@ -126,18 +127,60 @@ import HallucinationChart from "@/components/fundations/HallucinationChart";
           </div>
         </div>
 
+<div>
+          <h2 class="text-3xl font-bold text-darkblue-500 mb-6">The Framework: Desirable Difficulty</h2>
+          <p class="text-lg text-navy-600 leading-relaxed mb-6">
+            Robert Bjork's "Desirable Difficulty" theory explains why Rooted works. The counterintuitive finding: <strong class="text-darkblue-600">making learning feel harder in the right way produces dramatically better retention, understanding, and transferable skill.</strong> The struggle isn't a bug — it's the mechanism.
+          </p>
+
+          <div class="bg-green-50 border border-green-200 rounded-xl p-8 mb-8">
+            <h3 class="text-xl font-semibold text-darkblue-500 mb-6">The Evidence Behind Desirable Difficulty</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-white rounded-lg p-5">
+                <p class="text-4xl font-bold text-green-600">~30%</p>
+                <p class="text-base text-navy-600 mt-2">Retention increase when learners engage in effortful retrieval (testing effect) vs re-reading. Begin with questions learners can't yet answer — let them struggle, then reveal answers.</p>
+                <p class="text-sm text-beige-500 mt-2">Source: Bjork & Bjork (2020), Journal of Applied Research in Memory and Cognition</p>
+              </div>
+              <div class="bg-white rounded-lg p-5">
+                <p class="text-4xl font-bold text-green-600">20-25%</p>
+                <p class="text-base text-navy-600 mt-2">Performance improvement in teams trained with interleaved practice vs traditional massed training. Difficulty must be "desirable" — challenging but achievable.</p>
+                <p class="text-sm text-beige-500 mt-2">Source: Bjork Lab, Taylor (2025)</p>
+              </div>
+              <div class="bg-white rounded-lg p-5">
+                <p class="text-4xl font-bold text-green-600">Higher</p>
+                <p class="text-base text-navy-600 mt-2">Long-term retention from "generation effect" — when learners generate answers before receiving feedback, memory traces are stronger than passive re-reading.</p>
+                <p class="text-sm text-beige-500 mt-2">Source: Research Square (2025), Multilevel models across 11,000+ skills</p>
+              </div>
+              <div class="bg-white rounded-lg p-5">
+                <p class="text-4xl font-bold text-green-600">78%</p>
+                <p class="text-base text-navy-600 mt-2">Of Socratic AI interactions reflected growing autonomy in devising and validating solution strategies — students learn to think through problems rather than around them.</p>
+                <p class="text-sm text-beige-500 mt-2">Source: Socratic Mind study, Georgia Tech/UC San Diego (2025)</p>
+              </div>
+            </div>
+
+            <DesirableDifficultyChart client:load />
+          </div>
+
+          <div class="bg-darkblue-500 text-beige-100 rounded-xl p-8 mb-6">
+            <p class="text-xl font-semibold mb-3">The Core Principle</p>
+            <p class="text-base leading-relaxed">
+              When learning feels easy, we retain it poorly. When it requires struggle, retrieval effort, and generation — we retain it deeply. <strong>Rooted is a "desirable difficulty machine" by design</strong>: forced drawing (generation), Socratic questions (retrieval effort), no answers given (productive struggle).
+            </p>
+          </div>
+        </div>
+
         <div>
-          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Experiment</h2>
-          <p class="text-navy-600 leading-relaxed mb-4">
+          <h2 class="text-3xl font-bold text-darkblue-500 mb-6">The Experiment</h2>
+          <p class="text-lg text-navy-600 leading-relaxed mb-6">
             On March 29, 2026, a thought experiment was run. Instead of testing with an actual 5-year-old, Josh — Rooted's creator — pretended to be his young self and asked: "What would young Josh think multiplication is?"
           </p>
-          <p class="text-navy-600 leading-relaxed mb-4">
+          <p class="text-lg text-navy-600 leading-relaxed mb-4">
             The "child" drew. They grouped 6+6+6 into 12s. They counted how many sixes they'd used. They discovered that 6×3 = 18 on their own and doubled it. They arrived at 42 — not because someone told them, but because a single question at the right moment pulled them one step deeper each time.
           </p>
-          <p class="text-navy-600 leading-relaxed mb-4">
+          <p class="text-lg text-navy-600 leading-relaxed mb-4">
             Eight exchanges later — all drawings, all questions, no answers given — the same "child" discovered the distributive property of factoring themselves. At the end, they felt something closer to the opposite of relief — the quiet confidence of someone who figured it out themselves.
           </p>
-          <p class="text-navy-600 leading-relaxed italic">
+          <p class="text-base text-navy-600 leading-relaxed italic">
             Note: This was a conceptual experiment to demonstrate the Socratic method, not an actual user test with a 5-year-old.
           </p>
         </div>
