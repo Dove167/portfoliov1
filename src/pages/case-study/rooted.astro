@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import HallucinationChart from "@/components/fundations/HallucinationChart";
 ---
 
 <BaseLayout title="Rooted Case Study - Josh Fajardo">
@@ -17,7 +18,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
           rel="noopener noreferrer"
           class="inline-flex items-center space-x-2 px-6 py-3 bg-tan-500 text-darkblue-900 font-semibold rounded-lg hover:bg-tan-400 transition-all shadow-md"
         >
-          <span>Try Rooted</span>
+          <span>Try Live Demo</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
           </svg>
@@ -43,13 +44,86 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
         </div>
 
         <div>
-          <h2 class="text-2xl font-bold text-darkblue-500 mb-4">The Problem</h2>
-          <p class="text-navy-600 leading-relaxed mb-4">
+          <h2 class="text-3xl font-bold text-darkblue-500 mb-6">The Problem: Why Students Struggle with AI</h2>
+          <p class="text-lg text-navy-600 leading-relaxed mb-6 text-base">
             Students who never struggle through an idea. Developers who ship code they don't understand. Professionals who outsource reasoning they should own. Not because they're lazy — because the tools make it effortless to skip the hard part.
           </p>
-          <p class="text-navy-600 leading-relaxed">
-            The hard part is where the mind grows. <strong>The calculator is extraordinary. But only if you learned to count on your fingers first.</strong>
+          <p class="text-lg text-navy-600 leading-relaxed mb-8">
+            The hard part is where the mind grows. <strong class="text-darkblue-600">The calculator is extraordinary. But only if you learned to count on your fingers first.</strong>
           </p>
+
+          <div class="bg-red-50 border border-red-200 rounded-xl p-8 mb-8">
+            <h3 class="text-xl font-semibold text-darkblue-500 mb-6">The Crisis in Numbers</h3>
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div class="bg-white rounded-lg p-5">
+                <p class="text-4xl font-bold text-red-600">67%</p>
+                <p class="text-base text-navy-600 mt-2">of students say AI harms their critical thinking (up from 54% in 2025)</p>
+                <p class="text-sm text-beige-500 mt-2">Source: RAND American Youth Panel, Dec 2025</p>
+              </div>
+              <div class="bg-white rounded-lg p-5">
+                <p class="text-4xl font-bold text-red-600">95%</p>
+                <p class="text-base text-navy-600 mt-2">of college faculty fear student overreliance on AI</p>
+                <p class="text-sm text-beige-500 mt-2">Source: Elon/AAC&U National Survey, Jan 2026</p>
+              </div>
+              <div class="bg-white rounded-lg p-5">
+                <p class="text-4xl font-bold text-red-600">62%</p>
+                <p class="text-base text-navy-600 mt-2">of students use AI for homework (up from 48% in May 2025)</p>
+                <p class="text-sm text-beige-500 mt-2">Source: RAND American Youth Panel, Dec 2025</p>
+              </div>
+              <div class="bg-white rounded-lg p-5">
+                <p class="text-4xl font-bold text-red-600">40%</p>
+                <p class="text-base text-navy-600 mt-2">of Harvard students tried to cut back on AI — and failed</p>
+                <p class="text-sm text-beige-500 mt-2">Source: Harvard 7,000-student survey, 2026</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-tan-50 border border-tan-200 rounded-xl p-8 mb-8">
+            <h3 class="text-xl font-semibold text-darkblue-500 mb-6">The Research Is Clear</h3>
+            <ul class="space-y-4 text-navy-600 text-base">
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 font-bold text-lg">→</span>
+                <span><strong>AI reliance correlates with 17% lower comprehension</strong> — A study of 52 programmers learning a new skill found the AI group scored significantly lower despite finishing faster. The task got done. The learning didn't.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 font-bold text-lg">→</span>
+                <span><strong>Critical thinking scores declining</strong> — A 2025 study (r = -0.68 correlation) shows increased AI usage is linked to diminished ability to critically evaluate information and engage in reflective problem-solving.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 font-bold text-lg">→</span>
+                <span><strong>Cognitive offloading at scale</strong> — When you hand a mental task to AI, your brain stops engaging the same way. The OECD's Digital Education Outlook 2026 warns of "metacognitive laziness" — students stop thinking about their own thinking.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 font-bold text-lg">→</span>
+                <span><strong>Foundational skills declining</strong> — PISA 2022 shows sharp drops across OECD countries. Meanwhile, 80%+ of students use AI for assessed assignments, but fewer than 10% can verify the outputs.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-beige-100 border border-beige-200 rounded-xl p-8 mb-8">
+            <h3 class="text-xl font-semibold text-darkblue-500 mb-6">The Literacy Foundation Is Crumbling</h3>
+            <p class="text-base text-navy-600 mb-6">The problem starts even earlier than AI. Before students reach for AI calculators, many never developed the foundational thinking skills that make AI useful at all.</p>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="bg-white rounded-lg p-5 text-center">
+                <p class="text-3xl font-bold text-tan-500">41%</p>
+                <p class="text-base text-navy-600 mt-2">of parents read to kids under 5 (down from 64% in 2012)</p>
+              </div>
+              <div class="bg-white rounded-lg p-5 text-center">
+                <p class="text-3xl font-bold text-tan-500">18.7%</p>
+                <p class="text-base text-navy-600 mt-2">of 8-18 year olds read daily — lowest ever recorded</p>
+              </div>
+              <div class="bg-white rounded-lg p-5 text-center">
+                <p class="text-3xl font-bold text-tan-500">32.7%</p>
+                <p class="text-base text-navy-600 mt-2">of children enjoy reading — lowest in 20 years</p>
+              </div>
+            </div>
+            <p class="text-sm text-beige-600 mt-6">Sources: HarperCollins UK/Farshore (2024), National Literacy Trust (2025), National Assessment of Educational Progress (2022)</p>
+          </div>
+
+          <div class="bg-darkblue-500 text-beige-100 rounded-xl p-8 mb-6">
+            <p class="text-xl font-semibold mb-3">The Core Insight</p>
+            <p class="text-base">Students aren't just using AI to get answers. They're using it to avoid the struggle that builds capability. And the research confirms they're aware of it — 40% tried to stop, couldn't, and are worried about what it's doing to their thinking.</p>
+          </div>
         </div>
 
         <div>
@@ -104,19 +178,19 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
             <div class="relative aspect-video rounded-xl overflow-hidden bg-darkblue-600 shadow-lg">
               <img 
                 id="rooted-version-main-0"
-                src="/Rooted_AI_Version1.png" 
+                src="/images/portfolio/Rooted_AI_Version1.png" 
                 alt="Rooted AI Version 1"
                 class="w-full h-full object-cover absolute inset-0 transition-opacity duration-300 opacity-100"
               />
               <img 
                 id="rooted-version-main-1"
-                src="/Rooted_current_state.png" 
+                src="/images/portfolio/Rooted_current_state.png" 
                 alt="Rooted Current State"
                 class="w-full h-full object-cover absolute inset-0 transition-opacity duration-300 opacity-0"
               />
               <img 
                 id="rooted-version-main-2"
-                src="/Rooted_works_v2.png" 
+                src="/images/portfolio/Rooted_works_v2.png" 
                 alt="Rooted Works v2"
                 class="w-full h-full object-cover absolute inset-0 transition-opacity duration-300 opacity-0"
               />
@@ -146,7 +220,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                 data-thumbnail="rooted-version-0"
               >
                 <img 
-                  src="/Rooted_AI_Version1.png" 
+                  src="/images/portfolio/Rooted_AI_Version1.png" 
                   alt="Thumbnail 1"
                   class="w-full h-full object-cover"
                 />
@@ -157,7 +231,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                 data-thumbnail="rooted-version-1"
               >
                 <img 
-                  src="/Rooted_current_state.png" 
+                  src="/images/portfolio/Rooted_current_state.png" 
                   alt="Thumbnail 2"
                   class="w-full h-full object-cover"
                 />
@@ -168,7 +242,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                 data-thumbnail="rooted-version-2"
               >
                 <img 
-                  src="/Rooted_works_v2.png" 
+                  src="/images/portfolio/Rooted_works_v2.png" 
                   alt="Thumbnail 3"
                   class="w-full h-full object-cover"
                 />
@@ -419,6 +493,97 @@ RESPONSE
             <div class="bg-white border border-beige-300 p-4 rounded-lg">
               <h3 class="font-semibold text-darkblue-500 mb-2">Socratic by Design, Not Just Prompt</h3>
               <p class="text-navy-600 text-sm">The "never give answers" constraint is enforced at multiple levels: the system prompt defines the persona, but the code also validates AI responses don't contain answer indicators. This is the "Mahoraga pattern" — automatic regeneration if the constraint is violated.</p>
+            </div>
+
+            <div class="bg-white border border-beige-300 p-4 rounded-lg">
+              <h3 class="font-semibold text-darkblue-500 mb-2">Competitive Analysis & Metrics</h3>
+              <p class="text-navy-600 text-sm mb-3">Rooted differentiates through unique architecture choices compared to established players:</p>
+              <div class="overflow-x-auto">
+                <table class="w-full text-xs text-navy-600">
+                  <thead>
+                    <tr class="border-b border-beige-200">
+                      <th class="text-left py-2 pr-3">Dimension</th>
+                      <th class="text-left py-2 pr-3">NotebookLM</th>
+                      <th class="text-left py-2 pr-3">Perplexity</th>
+                      <th class="text-left py-2">Rooted</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b border-beige-100">
+                      <td class="py-2 pr-3 font-medium">Citation/Hallucination Rate</td>
+                      <td class="py-2 pr-3">13% overall; &lt;2% on grounded claims</td>
+                      <td class="py-2 pr-3">92-95% accuracy; 37% academic errors</td>
+                      <td class="py-2">0% (source-only, no web access)</td>
+                    </tr>
+                    <tr class="border-b border-beige-100">
+                      <td class="py-2 pr-3 font-medium">Research Approach</td>
+                      <td class="py-2 pr-3">RAG over uploaded documents</td>
+                      <td class="py-2 pr-3">Live web search + LLM synthesis</td>
+                      <td class="py-2">Socratic dialogue + future agent fleet</td>
+                    </tr>
+                    <tr class="border-b border-beige-100">
+                      <td class="py-2 pr-3 font-medium">Learning Outcome</td>
+                      <td class="py-2 pr-3">Understanding synthesis</td>
+                      <td class="py-2 pr-3">Knowledge retrieval</td>
+                      <td class="py-2">Metacognitive growth</td>
+                    </tr>
+                    <tr class="border-b border-beige-100">
+                      <td class="py-2 pr-3 font-medium">User Role</td>
+                      <td class="py-2 pr-3">Passive reader</td>
+                      <td class="py-2 pr-3">Information seeker</td>
+                      <td class="py-2">Active thinker</td>
+                    </tr>
+                    <tr class="border-b border-beige-100">
+                      <td class="py-2 pr-3 font-medium">Interaction Model</td>
+                      <td class="py-2 pr-3">Query → Summary</td>
+                      <td class="py-2 pr-3">Query → Answer</td>
+                      <td class="py-2">Draw → Question → Reflect</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2 pr-3 font-medium">Unique Features</td>
+                      <td class="py-2 pr-3">Audio Overviews, Mind Maps</td>
+                      <td class="py-2 pr-3">Deep Research, 50-source synthesis</td>
+                      <td class="py-2">Socratic constraint enforcement</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <HallucinationChart client:load />
+              
+              <h4 class="font-semibold text-darkblue-500 mt-6 mb-3 text-lg">Why Citation Accuracy Matters</h4>
+              <p class="text-navy-600 text-base mb-4 leading-relaxed">
+                According to Vectara's Hallucination Evaluation Model (HHEM-2.3, March 2026), even the best LLMs have measurable hallucination rates: GPT-5.4-nano at 3.1%, Gemini 2.5-flash-lite at 3.3%. These rates spike dramatically on obscure topics or when training data is thin.
+              </p>
+              <p class="text-navy-600 text-base mb-4 leading-relaxed">
+                A Columbia Tow Center study (2025) testing 200 citation queries found Perplexity had the lowest failure rate among AI search engines at 37% incorrect citations. NotebookLM's source-grounding architecture reduced hallucinations to 13% overall vs 40% for ChatGPT/Gemini.
+              </p>
+              
+              <h4 class="font-semibold text-darkblue-500 mt-6 mb-3 text-lg">Socratic AI: The Evidence Base</h4>
+              <p class="text-navy-600 text-base mb-4 leading-relaxed">
+                Research from Georgia Tech and UC San Diego ("Socratic Mind" study, 2025) found that students using Socratic AI showed measurable gains in quiz scores and reported significantly greater support for critical thinking, self-reflection, and independent reasoning.
+              </p>
+              <p class="text-navy-600 text-base mb-4 leading-relaxed">
+                A randomized controlled trial in K-12 science classrooms showed students in the AI-powered Socratic condition demonstrated significantly greater gains in scientific argumentation and critical thinking compared to control groups. 78% of interactions reflected growing autonomy in devising and validating solution strategies.
+              </p>
+
+              <h4 class="font-semibold text-darkblue-500 mt-6 mb-3 text-lg">Competitive Analysis: Why Existing Tools Fall Short</h4>
+              <p class="text-navy-600 text-base mb-4 leading-relaxed">
+                <strong>NotebookLM</strong> excels at source-grounded research — but it's fundamentally passive. You upload documents, you get summaries. The learning happens through reading synthesis, not through active reasoning. Its 13% hallucination rate (despite source-grounding) shows that even "grounded" AI isn't perfect. And for a student struggling with a concept, NotebookLM tells them what the sources say — not what <em>they</em> need to understand.
+              </p>
+              <p class="text-navy-600 text-base mb-4 leading-relaxed">
+                <strong>Perplexity</strong> is excellent for real-time knowledge retrieval — but retrieval isn't understanding. Its 92-95% accuracy sounds high until you realize that "accuracy" means "the answer looks plausible." The Columbia Tow Center study found 37% incorrect citations in practice. More critically, Perplexity answers questions. A student who asks Perplexity about the distributive property gets an answer — but the student never had to struggle to form the question in their own words.
+              </p>
+              <p class="text-navy-600 text-base mb-4 leading-relaxed">
+                <strong>Rooted</strong> inverts this relationship. Instead of the human asking the AI to answer, the AI asks the human to think. The canvas-based interface forces externalization of thought before engagement. The Socratic constraint — enforced at the code level, not just the prompt level — means Rooted physically cannot give you the answer. The "Mahoraga pattern" (automatic regeneration if answer indicators are detected) makes this a hard invariant, not a suggestion.
+              </p>
+              <p class="text-navy-600 text-base mb-4 leading-relaxed">
+                The key architectural difference: Rooted's 0% hallucination rate isn't because the AI is smarter — it's because Rooted doesn't access external sources. It only sees what the student draws. There's nothing to hallucinate about. This is a design choice, not a technical limitation. By restricting the AI to the student's own thinking, Rooted ensures the only hallucination possible is the student's misconceptions — which Rooted then uses as diagnostic data to ask better questions.
+              </p>
+
+              <p class="text-navy-600 text-sm mt-4 italic">
+                Sources: Vectara HHEM Leaderboard (March 2026), NotebookLM Guide (2026), Tow Center for Digital Journalism (Columbia, 2025), LMSYS April 2026 Evaluation, Socratic Mind (arXiv:2509.16262, 2025), Research Square (2025), RAND Corporation (2026).
+              </p>
             </div>
           </div>
         </div>

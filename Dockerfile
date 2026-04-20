@@ -20,7 +20,7 @@ COPY --from=astro-build /app/dist ./dist/
 RUN cargo build --release
 
 # Stage 3: Final runtime image
-FROM debian:bookworm-slim AS runtime
+FROM debian:trixie-slim AS runtime
 
 RUN apt-get update -qq && apt-get install -y --no-install-recommends \
     libssl3 \
